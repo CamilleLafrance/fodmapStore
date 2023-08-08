@@ -1,13 +1,13 @@
-package com.dai5.fodmapstoresb;
+package com.dai5.back;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class FodmapStoreSbApplicationTests {
+class BackApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
+	@Test
+	void contextLoads() {
+	}
 
 }
