@@ -1,6 +1,5 @@
 package com.dai5.back.model;
 
-import com.dai5.back.model.Category;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Getter;

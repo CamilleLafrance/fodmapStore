@@ -1,5 +1,6 @@
 package com.dai5.back.service;
 
+import com.dai5.back.model.Category;
 import com.dai5.back.model.Product;
 import com.dai5.back.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,4 @@ public class ProductService {
         return this.productRepository.findById(id).orElse(null);
     }
 
-    /*public List<Produit> getProduitsFromCategorie(Categorie categorie) {
-        return produitRepository.findAllByCategorie(categorie);
-    }*/
 }
