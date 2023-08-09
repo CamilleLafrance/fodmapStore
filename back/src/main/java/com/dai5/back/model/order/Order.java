@@ -1,12 +1,16 @@
 package com.dai5.back.model.order;
 
+import com.dai5.back.model.product.Product;
 import com.dai5.back.model.user.User;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.Instant;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
@@ -14,10 +18,12 @@ import java.time.Instant;
 @Table(name = "Orders", schema = "fodmapStore")
 public class Order {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JsonIgnore
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
@@ -36,5 +42,8 @@ public class Order {
 
     @Column(name = "delivered_at")
     private Instant deliveredAt;
+
+    @OneToMany(mappedBy = "order",  fetch = FetchType.LAZY)
+    private List<LinesProduct> linesProducts = new ArrayList<>();
 
 }
