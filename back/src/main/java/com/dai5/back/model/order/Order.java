@@ -1,8 +1,8 @@
 package com.dai5.back.model.order;
 
-import com.dai5.back.model.product.Product;
+import com.dai5.back.model.enums.OrderStatus;
 import com.dai5.back.model.user.User;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -22,17 +22,17 @@ public class Order {
     @Column(name = "id", nullable = false)
     private Integer id;
 
+    @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JsonIgnore
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @Column(name = "total_price", precision = 10, scale = 2)
     private BigDecimal totalPrice;
 
-    @Lob
+    @Enumerated(EnumType.STRING)
     @Column(name = "status")
-    private String status;
+    private OrderStatus status;
 
     @Column(name = "created_at", nullable = false)
     private Instant createdAt;
