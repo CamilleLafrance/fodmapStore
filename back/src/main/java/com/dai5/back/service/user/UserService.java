@@ -1,7 +1,7 @@
-package com.dai5.back.service;
+package com.dai5.back.service.user;
 
-import com.dai5.back.model.User;
-import com.dai5.back.repository.UserRepository;
+import com.dai5.back.model.user.User;
+import com.dai5.back.repository.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

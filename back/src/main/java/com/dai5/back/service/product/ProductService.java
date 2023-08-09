@@ -1,8 +1,7 @@
-package com.dai5.back.service;
+package com.dai5.back.service.product;
 
-import com.dai5.back.model.Category;
-import com.dai5.back.model.Product;
-import com.dai5.back.repository.ProductRepository;
+import com.dai5.back.model.product.Product;
+import com.dai5.back.repository.product.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

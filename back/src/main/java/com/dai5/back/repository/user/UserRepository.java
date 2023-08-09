@@ -1,6 +1,6 @@
-package com.dai5.back.repository;
+package com.dai5.back.repository.user;
 
-import com.dai5.back.model.User;
+import com.dai5.back.model.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

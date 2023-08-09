@@ -1,5 +1,6 @@
-package com.dai5.back.model;
+package com.dai5.back.model.product;
 
+import com.dai5.back.model.product.Category;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -14,6 +15,7 @@ import java.time.Instant;
 @Table(name = "Products", schema = "fodmapStore")
 public class Product {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Integer id;
 

@@ -1,6 +1,6 @@
-package com.dai5.back.repository;
+package com.dai5.back.repository.product;
 
-import com.dai5.back.model.Category;
+import com.dai5.back.model.product.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

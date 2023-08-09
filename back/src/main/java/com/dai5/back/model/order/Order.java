@@ -1,5 +1,6 @@
-package com.dai5.back.model;
+package com.dai5.back.model.order;
 
+import com.dai5.back.model.user.User;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -17,8 +18,8 @@ public class Order {
     private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "customer_id", nullable = false)
-    private Customer customer;
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
 
     @Column(name = "total_price", precision = 10, scale = 2)
     private BigDecimal totalPrice;

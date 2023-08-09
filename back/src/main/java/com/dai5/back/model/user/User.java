@@ -1,9 +1,6 @@
-package com.dai5.back.model;
+package com.dai5.back.model.user;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,6 +13,7 @@ import java.time.LocalDate;
 @Table(name = "Users", schema = "fodmapStore")
 public class User {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Integer id;
 
@@ -45,5 +43,17 @@ public class User {
 
     @Column(name = "is_admin")
     private Boolean isAdmin;
+
+    @Column(name = "address", length = 200)
+    private String address;
+
+    @Column(name = "postal_code", length = 50)
+    private String postalCode;
+
+    @Column(name = "city", length = 50)
+    private String city;
+
+    @Column(name = "country", length = 50)
+    private String country;
 
 }

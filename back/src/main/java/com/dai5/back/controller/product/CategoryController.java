@@ -1,7 +1,7 @@
-package com.dai5.back.controller;
+package com.dai5.back.controller.product;
 
-import com.dai5.back.model.Category;
-import com.dai5.back.service.CategoryService;
+import com.dai5.back.model.product.Category;
+import com.dai5.back.service.product.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,4 +1,4 @@
-package com.dai5.back.model;
+package com.dai5.back.model.product;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -14,6 +14,7 @@ import java.util.List;
 @Table(name = "Categories", schema = "fodmapStore")
 public class Category {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Integer id;
 
@@ -29,4 +30,5 @@ public class Category {
 
     @OneToMany(mappedBy = "category")
     private List<Product> products = new ArrayList<>();
+
 }

@@ -1,7 +1,8 @@
-package com.dai5.back.controller;
+package com.dai5.back.controller.user;
 
-import com.dai5.back.model.User;
-import com.dai5.back.service.UserService;
+import com.dai5.back.model.product.Category;
+import com.dai5.back.model.user.User;
+import com.dai5.back.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,4 +22,10 @@ public class UserController {
     public List<User> getAllUsers(){
         return this.userService.getAll();
     }
+
+    @GetMapping("/users/{idUser}")
+    public User getUser(@PathVariable Integer idUser){
+        return this.userService.byId(idUser);
+    }
+
 }
