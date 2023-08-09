@@ -1,11 +1,16 @@
 package com.dai5.back.model.user;
 
+import com.dai5.back.model.order.Order;
+import com.dai5.back.model.product.Product;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.Instant;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
@@ -55,5 +60,10 @@ public class User {
 
     @Column(name = "country", length = 50)
     private String country;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "order",
+            fetch = FetchType.LAZY)
+    private List<Order> orders = new ArrayList<>();
 
 }
