@@ -13,7 +13,7 @@ public class ProductService {
     @Autowired
     private ProductRepository productRepository;
 
-    public Product save(Product product){
+    public Product create(Product product){
         return this.productRepository.save(product);
     }
 
@@ -21,7 +21,7 @@ public class ProductService {
         return this.productRepository.findAll();
     }
 
-    public Product byId(Integer id) {
+    public Product getById(Integer id) {
         return this.productRepository.findById(id).orElse(null);
     }
 

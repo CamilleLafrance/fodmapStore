@@ -15,7 +15,7 @@ public class UserController {
     private UserService userService;
     @PostMapping("/users/add")
     public User addUser(@RequestBody User user){
-        return this.userService.save(user);
+        return this.userService.create(user);
     }
 
     @GetMapping("/users")
@@ -25,7 +25,7 @@ public class UserController {
 
     @GetMapping("/users/{idUser}")
     public User getUser(@PathVariable Integer idUser){
-        return this.userService.byId(idUser);
+        return this.userService.getById(idUser);
     }
 
 }

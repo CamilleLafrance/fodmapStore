@@ -13,7 +13,7 @@ public class OrderService {
     @Autowired
     private OrderRepository orderRepository;
 
-    public Order save(Order order){
+    public Order create(Order order){
         return this.orderRepository.save(order);
     }
 
@@ -21,7 +21,7 @@ public class OrderService {
         return this.orderRepository.findAll();
     }
 
-    public Order byId(Integer id) {
+    public Order getById(Integer id) {
         return this.orderRepository.findById(id).orElse(null);
     }
 

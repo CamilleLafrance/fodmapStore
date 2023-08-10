@@ -22,12 +22,12 @@ public class OrderController {
 
     @GetMapping("/orders/{idOrder}")
     public Order getOrder(@PathVariable Integer idOrder){
-        return this.orderService.byId(idOrder);
+        return this.orderService.getById(idOrder);
     }
 
     @PostMapping("/orders/add")
     public Order addOrder(@RequestBody Order order){
-        return this.orderService.save(order);
+        return this.orderService.create(order);
     }
 
     /*

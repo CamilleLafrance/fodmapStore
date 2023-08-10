@@ -13,7 +13,7 @@ public class CategoryService {
     @Autowired
     private CategoryRepository categoryRepository;
 
-    public Category save(Category category){
+    public Category create(Category category){
         return this.categoryRepository.save(category);
     }
 
@@ -21,7 +21,7 @@ public class CategoryService {
         return this.categoryRepository.findAll();
     }
 
-    public Category byId(Integer id) {
+    public Category getById(Integer id) {
         return this.categoryRepository.findById(id).orElse(null);
     }
 

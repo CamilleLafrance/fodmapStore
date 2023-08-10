@@ -12,7 +12,7 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public User save(User user){
+    public User create(User user){
         return this.userRepository.save(user);
     }
 
@@ -20,7 +20,7 @@ public class UserService {
         return this.userRepository.findAll();
     }
 
-    public User byId(Integer id) {
+    public User getById(Integer id) {
         return this.userRepository.findById(id).orElse(null);
     }
 }

@@ -20,7 +20,7 @@ public class ProductController {
 
     @PostMapping("/products/add")
     public Product addProduct(@RequestBody Product product){
-        return this.productService.save(product);
+        return this.productService.create(product);
     }
 
     @GetMapping("/products")
@@ -30,7 +30,7 @@ public class ProductController {
 
     @GetMapping("/products/{idProduct}")
     public Product getProduct(@PathVariable Integer idProduct){
-        return this.productService.byId(idProduct);
+        return this.productService.getById(idProduct);
     }
 
     @GetMapping("/products/category/{idCategory}")

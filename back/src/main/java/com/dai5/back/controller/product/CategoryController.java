@@ -15,7 +15,7 @@ public class CategoryController {
     private CategoryService categoryService;
     @PostMapping("/categories/add")
     public Category addCategory(@RequestBody Category category){
-        return this.categoryService.save(category);
+        return this.categoryService.create(category);
     }
 
     @GetMapping("/categories")
@@ -25,7 +25,7 @@ public class CategoryController {
 
     @GetMapping("/categories/{idCategory}")
     public Category getCategory(@PathVariable Integer idCategory){
-        return this.categoryService.byId(idCategory);
+        return this.categoryService.getById(idCategory);
     }
 
 }
