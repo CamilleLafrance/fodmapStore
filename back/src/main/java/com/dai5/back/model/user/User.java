@@ -61,9 +61,10 @@ public class User {
     @Column(name = "country", length = 50)
     private String country;
 
-    @JsonIgnore
+    // Un problème ici avec "order", ça me propose de créer un attribut manquant
+    /*@JsonIgnore
     @OneToMany(mappedBy = "order",
             fetch = FetchType.LAZY)
-    private List<Order> orders = new ArrayList<>();
+    private List<Order> orders = new ArrayList<>();*/
 
 }

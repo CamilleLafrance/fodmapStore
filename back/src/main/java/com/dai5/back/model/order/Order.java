@@ -44,6 +44,6 @@ public class Order {
     private Instant deliveredAt;
 
     @OneToMany(mappedBy = "order",  fetch = FetchType.LAZY)
-    private List<LinesProduct> linesProducts = new ArrayList<>();
+    private List<LineProduct> linesProducts = new ArrayList<>();
 
 }

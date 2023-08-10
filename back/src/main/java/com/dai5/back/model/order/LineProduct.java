@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 @Setter
 @Entity
 @Table(name = "LinesProducts", schema = "fodmapStore")
-public class LinesProduct {
+public class LineProduct {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -24,7 +24,7 @@ public class LinesProduct {
     private Order order;
 
     @JsonBackReference
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @OneToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "product_id", nullable = false)
     private Product product;
 
