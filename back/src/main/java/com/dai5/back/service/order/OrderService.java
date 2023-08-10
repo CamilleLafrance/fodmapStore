@@ -1,7 +1,5 @@
 package com.dai5.back.service.order;
 
-import com.dai5.back.model.order.Order;
-import com.dai5.back.model.product.Category;
 import com.dai5.back.repository.order.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
