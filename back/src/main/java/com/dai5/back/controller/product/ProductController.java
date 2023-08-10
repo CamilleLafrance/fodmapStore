@@ -35,7 +35,7 @@ public class ProductController {
 
     @GetMapping("/products/category/{idCategory}")
     public List<Product> getAllProductsFromCategory(@PathVariable Integer idCategory){
-        Category category = this.categoryService.byId(idCategory);
+        Category category = this.categoryService.getById(idCategory);
         return category.getProducts();
     }
 }
