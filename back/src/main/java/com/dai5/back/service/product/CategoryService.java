@@ -31,7 +31,7 @@ public class CategoryService {
     public Category update(Integer id, Category categoryDetails) {
         Category category = categoryRepository.findById(id).get();
         category.setName(categoryDetails.getName());
-        category.setDescription(categoryDetails.getDescription()); 
+        category.setDescription(categoryDetails.getDescription());
 
         return categoryRepository.save(category);
     }
