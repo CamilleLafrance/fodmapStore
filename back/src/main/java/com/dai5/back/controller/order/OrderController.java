@@ -4,6 +4,7 @@ import com.dai5.back.model.order.Order;
 import com.dai5.back.model.product.Category;
 import com.dai5.back.service.order.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -31,13 +32,12 @@ public class OrderController {
         return this.orderService.getById(idOrder);
     }
 
-    /*
+
     @GetMapping("/orders/user/{idUser}")
     public ResponseEntity<List<Order>> getOrdersByUser(@PathVariable Integer idUser){
         List<Order> orders = orderService.getOrdersByUser(idUser);
         return ResponseEntity.ok(orders);
     }
-     */
 
     // PUT
     @PutMapping("/orders/{idOrder}")

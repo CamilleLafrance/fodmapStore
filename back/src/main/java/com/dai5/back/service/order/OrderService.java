@@ -27,6 +27,10 @@ public class OrderService {
         return this.orderRepository.findById(id).orElse(null);
     }
 
+    public List<Order> getOrdersByUser(Integer idUser) {
+        return orderRepository.findByUser(idUser);
+    }
+
     // UPDATE
     public Order update(Integer id, Order orderDetails) {
         Order order = orderRepository.findById(id).get();
