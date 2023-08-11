@@ -1,6 +1,7 @@
 package com.dai5.back.controller.order;
 
 import com.dai5.back.model.order.Order;
+import com.dai5.back.model.product.Category;
 import com.dai5.back.service.order.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +14,13 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
 
+    // POST
+    @PostMapping("/orders/add")
+    public Order addOrder(@RequestBody Order order){
+        return this.orderService.create(order);
+    }
+
+    // GET
     @GetMapping("/orders")
     public List<Order> getAllOrders(){
         return this.orderService.getAll();
@@ -23,18 +31,24 @@ public class OrderController {
         return this.orderService.getById(idOrder);
     }
 
-    @PostMapping("/orders/add")
-    public Order addOrder(@RequestBody Order order){
-        return this.orderService.create(order);
-    }
-
     /*
-    @GetMapping("/orders/user/{idUser}") // pas plutôt user/{idUser}/orders ??
-    public List<Order> getAllOrdersFromUser(@PathVariable Integer idUser){
-        User user = this.userService.byId(idUser);
-        return user.getOrders();
+    @GetMapping("/orders/user/{idUser}")
+    public ResponseEntity<List<Order>> getOrdersByUser(@PathVariable Integer idUser){
+        List<Order> orders = orderService.getOrdersByUser(idUser);
+        return ResponseEntity.ok(orders);
+    }
+     */
+
+    // PUT
+    @PutMapping("/orders/{idOrder}")
+    public Order updateOrder(@PathVariable Integer idOrder, @RequestBody Order orderDetails){
+        return orderService.update(idOrder, orderDetails);
     }
 
-     */
+    // DELETE
+    @DeleteMapping("/orders/{idOrder}")
+    public void deleteCategory(@PathVariable Integer idOrder){
+        orderService.delete(idOrder);
+    }
 
 }

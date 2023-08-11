@@ -37,7 +37,7 @@ public class OrderService {
         order.setDeliveredAt(orderDetails.getDeliveredAt());
 
         return orderRepository.save(order);
-    } 
+    }
 
     // DELETE
     public void delete(Integer id) {
