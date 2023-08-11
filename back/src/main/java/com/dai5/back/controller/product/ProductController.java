@@ -18,11 +18,13 @@ public class ProductController {
     @Autowired
     private CategoryService categoryService;
 
+    // POST
     @PostMapping("/products/add")
     public Product addProduct(@RequestBody Product product){
         return this.productService.create(product);
     }
 
+    // GET
     @GetMapping("/products")
     public List<Product> getAllProducts(){
         return this.productService.getAll();
@@ -37,5 +39,17 @@ public class ProductController {
     public List<Product> getAllProductsFromCategory(@PathVariable Integer idCategory){
         Category category = this.categoryService.getById(idCategory);
         return category.getProducts();
+    }
+
+    // PUT
+    @PutMapping("/products/{idProduct}")
+    public Product updateProduct(@PathVariable Integer idProduct, @RequestBody Product productDetails){
+        return productService.update(idProduct, productDetails);
+    }
+
+    // DELETE
+    @DeleteMapping("/products/{idProduct}")
+    public void deleteProduct(@PathVariable Integer idProduct){
+        productService.delete(idProduct);
     }
 }
