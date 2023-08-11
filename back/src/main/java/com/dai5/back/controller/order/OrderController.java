@@ -1,7 +1,9 @@
 package com.dai5.back.controller.order;
 
+import com.dai5.back.model.order.LineProduct;
 import com.dai5.back.model.order.Order;
 import com.dai5.back.model.product.Category;
+import com.dai5.back.service.order.LineProductService;
 import com.dai5.back.service.order.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -15,10 +17,23 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
 
+    @Autowired
+    private LineProductService lineProductService;
+
     // POST
     @PostMapping("/orders/add")
     public Order addOrder(@RequestBody Order order){
         return this.orderService.create(order);
+    }
+
+    @PostMapping("/orders/{orderId}/add-product")
+    public Order addProductToOrder(@PathVariable Integer id, @RequestBody LineProduct lineProductDetails) {
+
+        LineProduct updatedLineProduct = lineProductService.updateLineProduct(id, lineProductDetails);
+        Order order = updatedLineProduct.getOrder();
+        orderService.updateOrderTotals(order);
+
+        return order;
     }
 
     // GET

@@ -1,5 +1,6 @@
 package com.dai5.back.model.order;
 
+import com.dai5.back.model.product.Product;
 import com.dai5.back.model.user.User;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
@@ -8,6 +9,8 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.Instant;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
@@ -41,4 +44,20 @@ public class Order {
     @JoinColumn(name = "order_status_id")
     private OrderStatus orderStatus;
 
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<LineProduct> linesProducts = new ArrayList<>();
+
+    public List<LineProduct> getLinesProducts() {
+        return linesProducts;
+    }
+
+    public void updateTotals() {
+        BigDecimal newTotalOrder = BigDecimal.ZERO;
+        for (LineProduct lineProduct : linesProducts) {
+            lineProduct.calculateLineProductWithDiscount(); // Recalculate for each line product total price with discount
+            BigDecimal lineProductTotalWithDiscount = lineProduct.getTotalPrice();
+            newTotalOrder = newTotalOrder.add(lineProductTotalWithDiscount);
+        }
+        this.totalPrice = newTotalOrder;
+    }
 }

@@ -40,4 +40,13 @@ public class LineProduct {
     @Column(name = "total_price", nullable = false, precision = 10, scale = 2)
     private BigDecimal totalPrice;
 
+    public void calculateLineProductWithDiscount() {
+        BigDecimal lineProductTotal = unitPrice.multiply(BigDecimal.valueOf(quantity));
+        BigDecimal discountAmount = lineProductTotal.multiply(discount);
+        BigDecimal lineProductTotalWithDiscount = lineProductTotal.subtract(discountAmount);
+        this.totalPrice = lineProductTotalWithDiscount;
+    }
+
+
+
 }
