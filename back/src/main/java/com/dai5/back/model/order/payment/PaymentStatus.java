@@ -1,4 +1,4 @@
-package com.dai5.back.model.order;
+package com.dai5.back.model.order.payment;
 
 import jakarta.persistence.*;
 import lombok.Getter;

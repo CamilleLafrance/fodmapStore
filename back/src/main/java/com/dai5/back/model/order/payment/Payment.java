@@ -1,5 +1,6 @@
-package com.dai5.back.model.order;
+package com.dai5.back.model.order.payment;
 
+import com.dai5.back.model.order.Order;
 import com.dai5.back.model.user.User;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;

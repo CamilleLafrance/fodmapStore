@@ -32,7 +32,6 @@ public class OrderController {
         return this.orderService.getById(idOrder);
     }
 
-
     @GetMapping("/orders/user/{idUser}")
     public ResponseEntity<List<Order>> getOrdersByUser(@PathVariable Integer idUser){
         List<Order> orders = orderService.getOrdersByUser(idUser);

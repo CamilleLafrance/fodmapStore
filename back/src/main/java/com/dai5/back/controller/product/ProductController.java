@@ -35,6 +35,7 @@ public class ProductController {
         return this.productService.getById(idProduct);
     }
 
+    // Cette route est-elle utile ?
     @GetMapping("/products/category/{idCategory}")
     public List<Product> getAllProductsFromCategory(@PathVariable Integer idCategory){
         Category category = this.categoryService.getById(idCategory);
