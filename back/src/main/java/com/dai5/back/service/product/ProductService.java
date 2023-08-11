@@ -28,7 +28,6 @@ public class ProductService {
         return this.productRepository.findById(id).orElse(null);
     }
 
-    /*  appel de la méthode findAllByCategory ? */
     // UPDATE
     public Product update(Integer id, Product productDetails) {
         Product product = productRepository.findById(id).get();
