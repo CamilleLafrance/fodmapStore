@@ -11,13 +11,17 @@ import java.util.List;
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class UserController {
+
     @Autowired
     private UserService userService;
+
+    // POST
     @PostMapping("/users/add")
     public User addUser(@RequestBody User user){
         return this.userService.create(user);
     }
 
+    // GET
     @GetMapping("/users")
     public List<User> getAllUsers(){
         return this.userService.getAll();
@@ -28,4 +32,15 @@ public class UserController {
         return this.userService.getById(idUser);
     }
 
+    // PUT
+    @PutMapping("/users/{idUser}")
+    public User updateUser(@PathVariable Integer idUser, @RequestBody User userDetails){
+        return userService.update(idUser, userDetails);
+    }
+
+    // DELETE
+    @DeleteMapping("/users/{idUser}")
+    public void deleteUser(@PathVariable Integer idUser){
+        userService.delete(idUser);
+    }
 }
