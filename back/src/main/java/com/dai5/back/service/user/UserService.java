@@ -1,6 +1,5 @@
 package com.dai5.back.service.user;
 
-import com.dai5.back.model.product.Category;
 import com.dai5.back.model.user.User;
 import com.dai5.back.repository.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +26,7 @@ public class UserService {
         return this.userRepository.findById(id).orElse(null);
     }
 
+    /* -- DOESN'T WORK --
     // UPDATE
     public User update(Integer id, User userDetails) {
         User user = userRepository.findById(id).get();
@@ -44,6 +44,8 @@ public class UserService {
 
         return userRepository.save(user);
     }
+
+     */
 
     // DELETE
     public void delete(Integer id) {

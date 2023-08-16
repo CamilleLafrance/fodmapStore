@@ -2,7 +2,6 @@ package com.dai5.back.controller.order;
 
 import com.dai5.back.model.order.LineProduct;
 import com.dai5.back.model.order.Order;
-import com.dai5.back.model.product.Category;
 import com.dai5.back.service.order.LineProductService;
 import com.dai5.back.service.order.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,12 +19,15 @@ public class OrderController {
     @Autowired
     private LineProductService lineProductService;
 
+    // -- NOT TESTED --
     // POST
-    @PostMapping("/orders/add")
+    @PostMapping("/orders")
     public Order addOrder(@RequestBody Order order){
         return this.orderService.create(order);
     }
 
+    // -- NOT TESTED --
+    /*
     @PostMapping("/orders/{orderId}/add-product")
     public Order addProductToOrder(@PathVariable Integer id, @RequestBody LineProduct lineProductDetails) {
 
@@ -36,6 +38,9 @@ public class OrderController {
         return order;
     }
 
+     */
+
+    // -- NOT TESTED --
     // GET
     @GetMapping("/orders")
     public List<Order> getAllOrders(){
@@ -47,18 +52,27 @@ public class OrderController {
         return this.orderService.getById(idOrder);
     }
 
+    // -- NOT TESTED --
+    /*
     @GetMapping("/orders/user/{idUser}")
     public ResponseEntity<List<Order>> getOrdersByUser(@PathVariable Integer idUser){
         List<Order> orders = orderService.getOrdersByUser(idUser);
         return ResponseEntity.ok(orders);
     }
 
+     */
+
+    // -- NOT TESTED --
+    /*
     // PUT
     @PutMapping("/orders/{idOrder}")
     public Order updateOrder(@PathVariable Integer idOrder, @RequestBody Order orderDetails){
         return orderService.update(idOrder, orderDetails);
     }
 
+     */
+
+    // -- NOT TESTED --
     // DELETE
     @DeleteMapping("/orders/{idOrder}")
     public void deleteCategory(@PathVariable Integer idOrder){

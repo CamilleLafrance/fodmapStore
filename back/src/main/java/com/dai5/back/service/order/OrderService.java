@@ -1,9 +1,6 @@
 package com.dai5.back.service.order;
 
-import com.dai5.back.model.order.LineProduct;
 import com.dai5.back.model.order.Order;
-import com.dai5.back.model.product.Category;
-import com.dai5.back.model.product.Product;
 import com.dai5.back.repository.order.LineProductRepository;
 import com.dai5.back.repository.order.OrderRepository;
 import com.dai5.back.repository.product.ProductRepository;
@@ -20,14 +17,17 @@ public class OrderService {
 
     @Autowired
     private ProductRepository productRepository;
+
     @Autowired
     private LineProductRepository lineProductRepository;
 
+    // -- NOT TESTED --
     // CREATE
     public Order create(Order order){
         return this.orderRepository.save(order);
     }
 
+    // -- NOT TESTED --
     // READ
     public List<Order> getAll() {
         return this.orderRepository.findAll();
@@ -37,10 +37,15 @@ public class OrderService {
         return this.orderRepository.findById(id).orElse(null);
     }
 
+    // -- NOT TESTED --
+    /*
     public List<Order> getOrdersByUser(Integer idUser) {
         return orderRepository.findByUser(idUser);
     }
 
+     */
+
+    /*
     // UPDATE
     public Order update(Integer id, Order orderDetails) {
         Order order = orderRepository.findById(id).get();
@@ -53,6 +58,9 @@ public class OrderService {
         return orderRepository.save(order);
     }
 
+     */
+
+    // -- NOT TESTED --
     @Transactional
     public void updateOrderTotals(Order order) {
 
@@ -62,6 +70,7 @@ public class OrderService {
         // SINON : orderRepository.save(order);
     }
 
+    // -- NOT TESTED --
     // DELETE
     public void delete(Integer id) {
 

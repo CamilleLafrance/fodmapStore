@@ -5,13 +5,12 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.Instant;
-import java.util.ArrayList;
 import java.util.List;
 
 @Getter
 @Setter
 @Entity
-@Table(name = "Categories", schema = "fodmapStore")
+@Table(name = "categories")
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,7 +27,14 @@ public class Category {
     @Column(name = "creation_date", nullable = false)
     private Instant creationDate;
 
+    /*
+    -- Cette syntaxe-là est-elle meilleure ? --
     @OneToMany(mappedBy = "category")
     private List<Product> products = new ArrayList<>();
+
+    -- Est-ce plus pertinent une relation @ManyToMany ? --
+    */
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
+    private List<Product> products;
 
 }

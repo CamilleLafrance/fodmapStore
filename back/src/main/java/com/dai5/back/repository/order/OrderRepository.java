@@ -10,7 +10,10 @@ import java.util.Optional;
 @Repository
 public interface OrderRepository extends JpaRepository<Order, Integer> {
 
+    /*
     List<Order> findByUser(Integer idUser);
+
+     */
 
     @Override
     Optional<Order> findById(Integer integer);

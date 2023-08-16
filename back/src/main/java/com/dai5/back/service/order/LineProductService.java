@@ -1,13 +1,12 @@
 package com.dai5.back.service.order;
 
-import com.dai5.back.model.order.LineProduct;
-import com.dai5.back.repository.order.LineProductRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class LineProductService {
 
+    // -- NOT TESTED --
+    /*
     @Autowired
     private LineProductRepository lineProductRepository;
 
@@ -22,4 +21,5 @@ public class LineProductService {
 
         return lineProductRepository.save(lineProduct);
     }
+    */
 }

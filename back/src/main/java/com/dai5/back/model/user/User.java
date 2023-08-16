@@ -1,19 +1,16 @@
 package com.dai5.back.model.user;
 
-import com.dai5.back.model.order.Order;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.Instant;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
 @Getter
 @Setter
 @Entity
-@Table(name = "Users", schema = "fodmapStore")
+@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,15 +35,6 @@ public class User {
     @Column(name = "date_of_birth")
     private LocalDate dateOfBirth;
 
-    @Column(name = "registration_date", nullable = false)
-    private Instant registrationDate;
-
-    @Column(name = "logged_in")
-    private Boolean loggedIn;
-
-    @Column(name = "is_admin")
-    private Boolean isAdmin;
-
     @Column(name = "address", length = 200)
     private String address;
 
@@ -59,8 +47,18 @@ public class User {
     @Column(name = "country", length = 50)
     private String country;
 
+    @Column(name = "registration_date", nullable = false)
+    private Instant registrationDate;
+
+    @Column(name = "logged_in")
+    private Boolean loggedIn;
+
+    @Column(name = "is_admin")
+    private Boolean isAdmin;
+
+    /*
     @OneToMany(mappedBy = "user",
             fetch = FetchType.LAZY)
     private List<Order> orders = new ArrayList<>();
-
+     */
 }

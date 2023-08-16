@@ -1,6 +1,5 @@
 package com.dai5.back.controller.product;
 
-import com.dai5.back.model.product.Category;
 import com.dai5.back.model.product.Product;
 import com.dai5.back.service.product.CategoryService;
 import com.dai5.back.service.product.ProductService;
@@ -15,14 +14,18 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
+    // -- USELESS ? --
     @Autowired
     private CategoryService categoryService;
 
+    // -- DOESN'T WORK
+    /*
     // POST
-    @PostMapping("/products/add")
+    @PostMapping("/products")
     public Product addProduct(@RequestBody Product product){
         return this.productService.create(product);
     }
+     */
 
     // GET
     @GetMapping("/products")
@@ -35,12 +38,17 @@ public class ProductController {
         return this.productService.getById(idProduct);
     }
 
+    // -- DOESN'T WORK / NOT TESTED --
     // PUT
+    /*
     @PutMapping("/products/{idProduct}")
     public Product updateProduct(@PathVariable Integer idProduct, @RequestBody Product productDetails){
         return productService.update(idProduct, productDetails);
     }
 
+     */
+
+    // -- NOT TESTED --
     // DELETE
     @DeleteMapping("/products/{idProduct}")
     public void deleteProduct(@PathVariable Integer idProduct){

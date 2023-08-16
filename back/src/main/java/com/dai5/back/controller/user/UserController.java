@@ -1,6 +1,5 @@
 package com.dai5.back.controller.user;
 
-import com.dai5.back.model.product.Category;
 import com.dai5.back.model.user.User;
 import com.dai5.back.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +15,9 @@ public class UserController {
     private UserService userService;
 
     // POST
-    @PostMapping("/users/add")
+    @PostMapping("/users")
     public User addUser(@RequestBody User user){
+
         return this.userService.create(user);
     }
 
@@ -32,11 +32,14 @@ public class UserController {
         return this.userService.getById(idUser);
     }
 
+    /* -- DOESN'T WORK --
     // PUT
     @PutMapping("/users/{idUser}")
     public User updateUser(@PathVariable Integer idUser, @RequestBody User userDetails){
         return userService.update(idUser, userDetails);
     }
+
+     */
 
     // DELETE
     @DeleteMapping("/users/{idUser}")

@@ -15,7 +15,7 @@ public class CategoryController {
     private CategoryService categoryService;
 
     // POST
-    @PostMapping("/categories/add")
+    @PostMapping("/categories")
     public Category addCategory(@RequestBody Category category){
         return this.categoryService.create(category);
     }
@@ -31,11 +31,14 @@ public class CategoryController {
         return this.categoryService.getById(idCategory);
     }
 
+    /* -- DOESN'T WORK / NOT TESTED --
     // PUT
     @PutMapping("/categories/{idCategory}")
     public Category updateCategory(@PathVariable Integer idCategory, @RequestBody Category categoryDetails){
         return categoryService.update(idCategory, categoryDetails);
     }
+
+     */
 
     // DELETE
     @DeleteMapping("/categories/{idCategory}")

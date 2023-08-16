@@ -27,6 +27,7 @@ public class CategoryService {
         return this.categoryRepository.findById(id).orElse(null);
     }
 
+    /* -- DOESN'T WORK / NOT TESTED --
     // UPDATE
     public Category update(Integer id, Category categoryDetails) {
         Category category = categoryRepository.findById(id).get();
@@ -35,6 +36,8 @@ public class CategoryService {
 
         return categoryRepository.save(category);
     }
+
+     */
 
     // DELETE
     public void delete(Integer id) {
