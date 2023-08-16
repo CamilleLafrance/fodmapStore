@@ -57,6 +57,7 @@ public class ProductService {
         product.setPrice(productDetails.getPrice());
         product.setCategory(productDetails.getCategory());
         product.setStockQuantity(product.getStockQuantity());
+        product.setWeight(product.getWeight());
 
         return productRepository.save(product);
     }

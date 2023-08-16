@@ -47,4 +47,7 @@ public class Product {
     @Column(name = "creation_date", nullable = false)
     private Instant creationDate;
 
+    @Column(name = "weight")
+    private Integer weight;
+
 }
