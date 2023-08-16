@@ -8,6 +8,7 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.Instant;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -34,9 +35,6 @@ public class Payment {
     @Column(name = "amount", precision = 10, scale = 2)
     private BigDecimal amount;
 
-    @Column(name = "paid_at", nullable = false)
-    private Instant paidAt;
-
     // -- Est-ce utile ici ? --
     // @JsonBackReference
     @OneToOne(fetch = FetchType.LAZY)
@@ -48,5 +46,8 @@ public class Payment {
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "payment_method_id")
     private PaymentMethod paymentMethod;
+
+    @Column(name = "paid_at", nullable = false)
+    private LocalDateTime paidAt;
 
 }

@@ -38,7 +38,8 @@ public class ProductService {
 
     // READ
     public List<Product> getAll() {
-        return this.productRepository.findAll();
+        List<Product> products = this.productRepository.findAll();
+        return products;
     }
 
     public Product getById(Integer id) {

@@ -8,6 +8,7 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.Instant;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -44,10 +45,10 @@ public class Product {
     @Column(name = "stock_quantity")
     private Integer stockQuantity;
 
-    @Column(name = "creation_date", nullable = false)
-    private Instant creationDate;
-
     @Column(name = "weight")
     private Integer weight;
+
+    @Column(name = "creation_date", nullable = false)
+    private LocalDateTime creationDate;
 
 }

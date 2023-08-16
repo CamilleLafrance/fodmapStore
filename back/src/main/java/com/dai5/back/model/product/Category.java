@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Getter
@@ -25,7 +26,7 @@ public class Category {
     private String description;
 
     @Column(name = "creation_date", nullable = false)
-    private Instant creationDate;
+    private LocalDateTime creationDate;
 
     /*
     -- Cette syntaxe-là est-elle meilleure ? --

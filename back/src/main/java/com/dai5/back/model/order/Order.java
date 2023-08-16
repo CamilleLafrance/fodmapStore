@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,15 +33,6 @@ public class Order {
     @Column(name = "total_discount", precision = 10, scale = 2)
     private BigDecimal totalDiscount;
 
-    @Column(name = "created_at", nullable = false)
-    private Instant createdAt;
-
-    @Column(name = "shipped_at")
-    private Instant shippedAt;
-
-    @Column(name = "delivered_at")
-    private Instant deliveredAt;
-
     // -- Est-ce utile ici ? --
     // @JsonBackReference
     @OneToOne(fetch = FetchType.LAZY)
@@ -50,6 +42,15 @@ public class Order {
     // -- NOT TESTED --
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<LineProduct> linesProducts = new ArrayList<>();
+
+    @Column(name = "created_at", nullable = false)
+    private LocalDateTime createdAt;
+
+    @Column(name = "shipped_at")
+    private LocalDateTime shippedAt;
+
+    @Column(name = "delivered_at")
+    private LocalDateTime deliveredAt;
 
     public List<LineProduct> getLinesProducts() {
         return linesProducts;

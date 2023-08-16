@@ -6,6 +6,7 @@ import lombok.Setter;
 
 import java.time.Instant;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -47,14 +48,14 @@ public class User {
     @Column(name = "country", length = 50)
     private String country;
 
-    @Column(name = "registration_date", nullable = false)
-    private Instant registrationDate;
-
     @Column(name = "logged_in")
     private Boolean loggedIn;
 
     @Column(name = "is_admin")
     private Boolean isAdmin;
+
+    @Column(name = "registration_date", nullable = false)
+    private LocalDateTime registrationDate;
 
     /*
     @OneToMany(mappedBy = "user",
