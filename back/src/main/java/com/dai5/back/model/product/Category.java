@@ -1,11 +1,13 @@
 package com.dai5.back.model.product;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -25,17 +27,14 @@ public class Category {
     @Column(name = "description")
     private String description;
 
+    @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
     @Column(name = "creation_date", nullable = false)
     private LocalDateTime creationDate;
 
     /*
-    -- Cette syntaxe-là est-elle meilleure ? --
-    @OneToMany(mappedBy = "category")
-    private List<Product> products = new ArrayList<>();
-
     -- Est-ce plus pertinent une relation @ManyToMany ? --
     */
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
-    private List<Product> products;
+    private List<Product> products = new ArrayList<>();
 
 }

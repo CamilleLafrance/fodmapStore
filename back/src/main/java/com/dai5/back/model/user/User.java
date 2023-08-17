@@ -1,5 +1,6 @@
 package com.dai5.back.model.user;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -33,6 +34,7 @@ public class User {
     @Column(name = "phone_number", length = 20)
     private String phoneNumber;
 
+    @JsonFormat(pattern = "dd/MM/yyyy")
     @Column(name = "date_of_birth")
     private LocalDate dateOfBirth;
 
@@ -54,6 +56,7 @@ public class User {
     @Column(name = "is_admin")
     private Boolean isAdmin;
 
+    @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
     @Column(name = "registration_date", nullable = false)
     private LocalDateTime registrationDate;
 

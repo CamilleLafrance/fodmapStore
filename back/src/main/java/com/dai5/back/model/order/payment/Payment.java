@@ -2,6 +2,7 @@ package com.dai5.back.model.order.payment;
 
 import com.dai5.back.model.order.Order;
 import com.dai5.back.model.user.User;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -47,6 +48,7 @@ public class Payment {
     @JoinColumn(name = "payment_method_id")
     private PaymentMethod paymentMethod;
 
+    @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
     @Column(name = "paid_at", nullable = false)
     private LocalDateTime paidAt;
 
