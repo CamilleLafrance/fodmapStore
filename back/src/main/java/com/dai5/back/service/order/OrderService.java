@@ -8,74 +8,56 @@ import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
+// -- NOT TESTED --
 @Service
+@Transactional
 public class OrderService {
     @Autowired
     private OrderRepository orderRepository;
 
-    @Autowired
-    private ProductRepository productRepository;
-
-    @Autowired
-    private LineProductRepository lineProductRepository;
-
-    // -- NOT TESTED --
     // CREATE
     public Order create(Order order){
+        order.setCreatedAt(LocalDateTime.now());
         return this.orderRepository.save(order);
     }
 
-    // -- NOT TESTED --
     // READ
     public List<Order> getAll() {
+
         return this.orderRepository.findAll();
     }
 
     public Order getById(Integer id) {
+
         return this.orderRepository.findById(id).orElse(null);
     }
 
-    // -- NOT TESTED --
     /*
     public List<Order> getOrdersByUser(Integer idUser) {
         return orderRepository.findByUser(idUser);
     }
-
      */
 
-    /*
     // UPDATE
-    public Order update(Integer id, Order orderDetails) {
-        Order order = orderRepository.findById(id).get();
-        order.setUser(orderDetails.getUser());
-        order.setTotalPrice(orderDetails.getTotalPrice());
-        order.setOrderStatus(orderDetails.getOrderStatus());
-        order.setShippedAt(orderDetails.getShippedAt());
-        order.setDeliveredAt(orderDetails.getDeliveredAt());
+    public void update(Order order) {
 
-        return orderRepository.save(order);
+        this.orderRepository.save(order);
     }
 
-     */
-
-    // -- NOT TESTED --
-    @Transactional
     public void updateOrderTotals(Order order) {
 
-        order.updateTotals();
+        order.getTotals();
         // Pas besoin de sauvegarder explicitement, car
         // la transaction gère la mise à jour en base de données
         // SINON : orderRepository.save(order);
     }
 
-    // -- NOT TESTED --
     // DELETE
     public void delete(Integer id) {
 
         orderRepository.deleteById(id);
     }
-
-
 }

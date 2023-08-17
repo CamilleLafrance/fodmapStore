@@ -42,7 +42,7 @@ public class LineProduct {
 
     // -- NOT TESTED --
     @Transient
-    public void calculateLineProductWithDiscount() {
+    public void getLineProductWithDiscount() {
         BigDecimal lineProductTotal = unitPrice.multiply(BigDecimal.valueOf(quantity));
         BigDecimal discountAmount = lineProductTotal.multiply(discount);
         BigDecimal lineProductTotalWithDiscount = lineProductTotal.subtract(discountAmount);

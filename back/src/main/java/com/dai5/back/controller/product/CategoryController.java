@@ -14,20 +14,24 @@ public class CategoryController {
     @Autowired
     private CategoryService categoryService;
 
+    // -- DOESN'T WORK ANYMORE --
     // POST
     @PostMapping("/categories")
     public Category addCategory(@RequestBody Category category){
+
         return this.categoryService.create(category);
     }
 
     // GET
     @GetMapping("/categories")
     public List<Category> getAllCategories(){
+
         return this.categoryService.getAll();
     }
 
     @GetMapping("/categories/{idCategory}")
     public Category getCategory(@PathVariable Integer idCategory){
+
         return this.categoryService.getById(idCategory);
     }
 
@@ -43,6 +47,7 @@ public class CategoryController {
     // DELETE
     @DeleteMapping("/categories/{idCategory}")
     public void deleteCategory(@PathVariable Integer idCategory){
+
         categoryService.delete(idCategory);
     }
 

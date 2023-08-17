@@ -5,6 +5,7 @@ import com.dai5.back.repository.product.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -15,29 +16,28 @@ public class CategoryService {
 
     // CREATE
     public Category create(Category category){
+
+        category.setCreationDate(LocalDateTime.now());
         return this.categoryRepository.save(category);
     }
 
     // READ
     public List<Category> getAll() {
+
         return this.categoryRepository.findAll();
     }
 
     public Category getById(Integer id) {
+
         return this.categoryRepository.findById(id).orElse(null);
     }
 
-    /* -- DOESN'T WORK / NOT TESTED --
+    // -- DOESN'T WORK / NOT TESTED --
     // UPDATE
-    public Category update(Integer id, Category categoryDetails) {
-        Category category = categoryRepository.findById(id).get();
-        category.setName(categoryDetails.getName());
-        category.setDescription(categoryDetails.getDescription());
+    public void update(Category category) {
 
-        return categoryRepository.save(category);
+        this.categoryRepository.save(category);
     }
-
-     */
 
     // DELETE
     public void delete(Integer id) {

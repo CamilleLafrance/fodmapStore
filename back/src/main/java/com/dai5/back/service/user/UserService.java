@@ -5,6 +5,7 @@ import com.dai5.back.repository.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -12,40 +13,31 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
+    // -- DOESN'T WORK ANYMORE --
     // CREATE
     public User create(User user){
+
+        user.setRegistrationDate(LocalDateTime.now());
         return this.userRepository.save(user);
     }
 
     // READ
     public List<User> getAll() {
+
         return this.userRepository.findAll();
     }
 
     public User getById(Integer id) {
+
         return this.userRepository.findById(id).orElse(null);
     }
 
-    /* -- DOESN'T WORK --
+    // -- DOESN'T WORK --
     // UPDATE
-    public User update(Integer id, User userDetails) {
-        User user = userRepository.findById(id).get();
-        user.setFirstName(userDetails.getFirstName());
-        user.setLastName(user.getLastName());
-        user.setEmail(user.getEmail());
-        user.setPasswordHash(user.getPasswordHash());
-        user.setPhoneNumber(user.getPhoneNumber());
-        user.setDateOfBirth(user.getDateOfBirth());
-        user.setAddress(user.getAddress());
-        user.setPostalCode(user.getPostalCode());
-        user.setCity(user.getCity());
-        user.setCountry(user.getCountry());
-        user.setIsAdmin(user.getIsAdmin());
+    public void update(User user) {
 
-        return userRepository.save(user);
+        this.userRepository.save(user);
     }
-
-     */
 
     // DELETE
     public void delete(Integer id) {

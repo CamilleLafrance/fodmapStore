@@ -14,6 +14,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    // -- DOESN'T WORK ANYMORE --
     // POST
     @PostMapping("/users")
     public User addUser(@RequestBody User user){

@@ -55,15 +55,11 @@ public class Order {
     @Column(name = "delivered_at")
     private LocalDateTime deliveredAt;
 
-    public List<LineProduct> getLinesProducts() {
-        return linesProducts;
-    }
-
     @Transient
-    public void updateTotals() {
+    public void getTotals() {
         BigDecimal newTotalOrder = BigDecimal.ZERO;
         for (LineProduct lineProduct : linesProducts) {
-            lineProduct.calculateLineProductWithDiscount(); // Recalculer le prix total avec remise pour chaque ligne
+            lineProduct.getLineProductWithDiscount(); // Recalculer le prix total avec remise pour chaque ligne
             BigDecimal lineProductTotalWithDiscount = lineProduct.getTotalPrice();
             newTotalOrder = newTotalOrder.add(lineProductTotalWithDiscount);
         }
