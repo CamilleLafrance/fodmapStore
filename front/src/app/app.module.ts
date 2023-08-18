@@ -8,6 +8,7 @@ import { ProductComponent } from "./components/product/product.component";
 import { OrderComponent } from "./components/order/order.component";
 import { UserComponent } from "./components/user/user.component";
 import { ProductPageComponent } from "./product-page/product-page.component";
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ProductPageComponent } from "./product-page/product-page.component";
     OrderComponent,
     UserComponent,
     ProductPageComponent,
+    NavigationComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
