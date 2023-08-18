@@ -2,8 +2,7 @@ import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
-import { AppComponent } from "./app.component";
-import { HomepageComponent } from "./components/homepage/homepage.component";
+import { AppComponent } from "./app.component"; 
 import { CategoryComponent } from "./components/category/category.component";
 import { ProductComponent } from "./components/product/product.component";
 import { OrderComponent } from "./components/order/order.component";
@@ -12,8 +11,7 @@ import { ProductPageComponent } from "./product-page/product-page.component";
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomepageComponent,
+    AppComponent, 
     CategoryComponent,
     ProductComponent,
     OrderComponent,
