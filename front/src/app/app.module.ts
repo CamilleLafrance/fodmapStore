@@ -7,8 +7,8 @@ import { CategoryComponent } from "./components/category/category.component";
 import { ProductComponent } from "./components/product/product.component";
 import { OrderComponent } from "./components/order/order.component";
 import { UserComponent } from "./components/user/user.component";
-import { ProductPageComponent } from "./product-page/product-page.component";
-import { NavigationComponent } from './navigation/navigation.component';
+import { ProductPageComponent } from "./components/product-page/product-page.component";
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 @NgModule({
   declarations: [
