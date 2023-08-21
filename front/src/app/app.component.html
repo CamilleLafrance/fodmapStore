@@ -4,19 +4,32 @@
 <!-- Header -->
 <header class="bg-dark py-5">
   <div class="container px-4 px-lg-5 my-5">
-      <div class="text-center text-white">
-          <h1 class="display-4 fw-bolder">Ressentez l'apaisement au naturel</h1>
-          <p class="lead fw-normal text-white-50 mb-0">Notre sélection pensée pour votre confort et votre bien-être absolu</p>
-      </div>
+    <div class="text-center text-white">
+      <h1 class="display-4 fw-bolder">Ressentez l'apaisement au naturel</h1>
+      <p class="lead fw-normal text-white-50 mb-0">
+        Notre sélection pensée pour votre confort et votre bien-être absolu
+      </p>
+    </div>
   </div>
 </header>
 
-<!-- Section -->
-<app-product></app-product>
-<app-product-page></app-product-page>
- 
+<!--Main layout-->
+<main>
+  <div class="container">
+    <!-- Section -->
+    <app-navigation-categories></app-navigation-categories>
+    <app-product></app-product>
+    <app-product-page></app-product-page>
+  </div>
+</main>
+
 <!-- Footer-->
 <footer class="py-5 bg-dark">
-  <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Fodmapment vôtre 2023</p></div>
+  <div class="container">
+    <p class="m-0 text-center text-white">
+      Copyright &copy; Fodmapment vôtre 2023
+    </p>
+  </div>
 </footer>
+
 <!-- <router-outlet></router-outlet> -->

@@ -9,6 +9,7 @@ import { OrderComponent } from "./components/order/order.component";
 import { UserComponent } from "./components/user/user.component";
 import { ProductPageComponent } from "./components/product-page/product-page.component";
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { NavigationCategoriesComponent } from './components/navigation-categories/navigation-categories.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
     UserComponent,
     ProductPageComponent,
     NavigationComponent,
+    NavigationCategoriesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

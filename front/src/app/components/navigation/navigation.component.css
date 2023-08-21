@@ -1,0 +1,11 @@
+#navbar-right-links {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 991.98px) { 
+    #navbar-right-links {
+        display: flex;
+        flex-direction: row;
+    }
+ }
