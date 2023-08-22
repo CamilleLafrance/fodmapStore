@@ -1,14 +1,13 @@
 package com.dai5.back.model.order;
 
 import com.dai5.back.model.user.User;
-import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Getter
@@ -43,17 +42,14 @@ public class Order {
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<LineProduct> linesProducts = new ArrayList<>();
 
-    @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
-    @Column(name = "created_at", nullable = false)
-    private LocalDateTime createdAt;
+    @Column(name = "created_at")
+    private Date createdAt;
 
-    @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
     @Column(name = "shipped_at")
-    private LocalDateTime shippedAt;
+    private Date shippedAt;
 
-    @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
     @Column(name = "delivered_at")
-    private LocalDateTime deliveredAt;
+    private Date deliveredAt;
 
     @Transient
     public void getTotals() {

@@ -1,15 +1,11 @@
 package com.dai5.back.model.product;
 
-import com.dai5.back.model.product.Category;
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
-import java.time.Instant;
-import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -48,9 +44,5 @@ public class Product {
 
     @Column(name = "weight")
     private Integer weight;
-
-    @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
-    @Column(name = "creation_date", nullable = false)
-    private LocalDateTime creationDate;
 
 }

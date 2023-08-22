@@ -1,12 +1,9 @@
 package com.dai5.back.model.product;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.Instant;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,10 +23,6 @@ public class Category {
     @Lob
     @Column(name = "description")
     private String description;
-
-    @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
-    @Column(name = "creation_date", nullable = false)
-    private LocalDateTime creationDate;
 
     /*
     -- Est-ce plus pertinent une relation @ManyToMany ? --

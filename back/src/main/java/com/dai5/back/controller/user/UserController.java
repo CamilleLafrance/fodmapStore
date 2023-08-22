@@ -3,6 +3,7 @@ package com.dai5.back.controller.user;
 import com.dai5.back.model.user.User;
 import com.dai5.back.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -32,14 +33,13 @@ public class UserController {
         return this.userService.getById(idUser);
     }
 
-    // -- DOESN'T WORK --
+    /* -- DOESN'T WORK --
     // PUT
-    /*
     @PutMapping("/users/{idUser}")
-    public User updateUser(@PathVariable Integer idUser, @RequestBody User userDetails){
+    public User updateUser(@PathVariable Integer idUser, @RequestBody User updatedUser){
         return userService.update(idUser, userDetails);
     }
-     */
+    */
 
     // DELETE
     @DeleteMapping("/users/{idUser}")

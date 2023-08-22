@@ -20,7 +20,6 @@ public class ProductService {
     // CREATE
     public Product create(Product product){
 
-        product.setCreationDate(LocalDateTime.now());
         return this.productRepository.save(product);
     }
 

@@ -18,7 +18,7 @@ public class OrderService {
 
     // CREATE
     public Order create(Order order){
-        order.setCreatedAt(LocalDateTime.now());
+
         return this.orderRepository.save(order);
     }
 

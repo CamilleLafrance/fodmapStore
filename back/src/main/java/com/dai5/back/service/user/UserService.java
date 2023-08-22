@@ -30,14 +30,12 @@ public class UserService {
         return userRepository.findById(id).orElse(null);
     }
 
-    // -- DOESN'T WORK --
+    /* -- DOESN'T WORK --
     // UPDATE
-    public User update(Integer id, User user) {
-        if (user.getId() == id) {
-            return this.userRepository.save(user);
-        }
-       return null;
+    public User update(User user) {
+        return this.userRepository.save(user);
     }
+     */
 
     // DELETE
     public void delete(Integer id) {
