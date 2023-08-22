@@ -6,28 +6,29 @@ import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
-// -- NOT TESTED --
 @Service
 @Transactional
 public class OrderService {
     @Autowired
     private OrderRepository orderRepository;
 
+    // -- DOESN'T WORK --
     // CREATE
     public Order create(Order order){
 
         return this.orderRepository.save(order);
     }
 
+    // -- NOT TESTED --
     // READ
     public List<Order> getAll() {
 
         return this.orderRepository.findAll();
     }
 
+    // -- NOT TESTED --
     public Order getById(Integer id) {
 
         return this.orderRepository.findById(id).orElse(null);
@@ -39,12 +40,14 @@ public class OrderService {
     }
      */
 
+    // -- NOT TESTED --
     // UPDATE
     public void update(Order order) {
 
         this.orderRepository.save(order);
     }
 
+    // -- NOT TESTED --
     public void updateOrderTotals(Order order) {
 
         order.getTotals();
@@ -53,6 +56,7 @@ public class OrderService {
         // SINON : orderRepository.save(order);
     }
 
+    // -- NOT TESTED --
     // DELETE
     public void delete(Integer id) {
 

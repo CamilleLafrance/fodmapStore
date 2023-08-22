@@ -31,7 +31,7 @@ public class CategoryService {
         return this.categoryRepository.findById(id).orElse(null);
     }
 
-    // -- DOESN'T WORK / NOT TESTED --
+    // -- NOT TESTED --
     // UPDATE
     public void update(Category category) {
 
