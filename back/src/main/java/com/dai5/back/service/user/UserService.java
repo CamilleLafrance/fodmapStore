@@ -13,11 +13,9 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    // -- DOESN'T WORK ANYMORE --
     // CREATE
     public User create(User user){
 
-        user.setRegistrationDate(LocalDateTime.now());
         return this.userRepository.save(user);
     }
 
@@ -29,14 +27,16 @@ public class UserService {
 
     public User getById(Integer id) {
 
-        return this.userRepository.findById(id).orElse(null);
+        return userRepository.findById(id).orElse(null);
     }
 
     // -- DOESN'T WORK --
     // UPDATE
-    public void update(User user) {
-
-        this.userRepository.save(user);
+    public User update(Integer id, User user) {
+        if (user.getId() == id) {
+            return this.userRepository.save(user);
+        }
+       return null;
     }
 
     // DELETE

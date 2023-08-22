@@ -8,6 +8,7 @@ import lombok.Setter;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -36,7 +37,7 @@ public class User {
 
     @JsonFormat(pattern = "dd/MM/yyyy")
     @Column(name = "date_of_birth")
-    private LocalDate dateOfBirth;
+    private Date dateOfBirth;
 
     @Column(name = "address", length = 200)
     private String address;
@@ -55,10 +56,6 @@ public class User {
 
     @Column(name = "is_admin")
     private Boolean isAdmin;
-
-    @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
-    @Column(name = "registration_date", nullable = false)
-    private LocalDateTime registrationDate;
 
     /*
     @OneToMany(mappedBy = "user",

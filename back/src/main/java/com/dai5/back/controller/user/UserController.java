@@ -14,7 +14,6 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    // -- DOESN'T WORK ANYMORE --
     // POST
     @PostMapping("/users")
     public User addUser(@RequestBody User user){
@@ -33,13 +32,13 @@ public class UserController {
         return this.userService.getById(idUser);
     }
 
-    /* -- DOESN'T WORK --
+    // -- DOESN'T WORK --
     // PUT
+    /*
     @PutMapping("/users/{idUser}")
     public User updateUser(@PathVariable Integer idUser, @RequestBody User userDetails){
         return userService.update(idUser, userDetails);
     }
-
      */
 
     // DELETE

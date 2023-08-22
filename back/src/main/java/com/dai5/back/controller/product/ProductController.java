@@ -18,14 +18,14 @@ public class ProductController {
     @Autowired
     private CategoryService categoryService;
 
-    // -- DOESN'T WORK
-    /*
+    // -- DOESN'T WORK --
+
     // POST
     @PostMapping("/products")
     public Product addProduct(@RequestBody Product product){
         return this.productService.create(product);
     }
-     */
+
 
     // GET
     @GetMapping("/products")
