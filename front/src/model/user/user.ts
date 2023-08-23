@@ -4,13 +4,12 @@ export interface User {
     lastName: string;
     email: string;
     passwordHash: string;
-    phoneNumber: string;
-    dateOfBirth: Date;
-    address: string;
-    postalCode: string;
-    city: string;
-    country: string;
-    registrationDate: Date;
+    phoneNumber?: string;
+    dateOfBirth?: Date;
+    address?: string;
+    postalCode?: string;
+    city?: string;
+    country?: string;
     loggedIn: boolean;
     isAdmin: boolean;
 }

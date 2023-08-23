@@ -10,5 +10,4 @@ export interface Product {
     price: number;
     category: Category;
     stockQuantity: number;
-    creationDate: Date;
 }
