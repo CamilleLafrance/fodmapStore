@@ -15,6 +15,11 @@ export class ProductService {
   public addProduct(product : Product): Observable<Product>{
     return this.http.post<Product>(this.baseURL + "/products", product);
   }
+  /*
+  saveProduct() {
+    this.http.post(this.baseUrl)
+  }
+  */
 
   // READ
   public getAllProducts(): Observable<Array<Product>> {

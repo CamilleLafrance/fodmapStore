@@ -1,16 +1,18 @@
-import { Component, OnInit } from "@angular/core";
-import { FormBuilder, FormGroup, NgForm, Validators } from "@angular/forms";
-import { AuthService } from "../../services/auth.service";
-import { Router } from "@angular/router";
-import { UserService } from "src/app/services/user.service";
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
+import { UserService } from 'src/app/services/user.service';
+import { User } from 'src/model/user/user';
 
 @Component({
-  selector: "app-sign-in",
-  templateUrl: "./sign-in.component.html",
-  styleUrls: ["./sign-in.component.css"],
+  selector: 'app-sign-up',
+  templateUrl: './sign-up.component.html',
+  styleUrls: ['./sign-up.component.css']
 })
-export class SignInComponent implements OnInit {
-  signInForm!: FormGroup;
+export class SignUpComponent implements OnInit {
+
+  signUpForm!: FormGroup;
 
   constructor(private formBuilder: FormBuilder, 
               private userService: UserService, 
@@ -22,7 +24,7 @@ export class SignInComponent implements OnInit {
   }
   // pattern : at least 8 characters in length, lowercase letters,uppercase letters, numbers, special characters
   initForm() {
-    this.signInForm = this.formBuilder.group({ 
+    this.signUpForm = this.formBuilder.group({ 
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}')]],
     })
@@ -30,8 +32,8 @@ export class SignInComponent implements OnInit {
 
   onSubmitForm() {
     // ? -> peut-être la valeur nulle ?
-    const email = this.signInForm.get('email')?.value; 
-    const password = this.signInForm.get('password')?.value;
+    const email = this.signUpForm.get('email')?.value; 
+    const password = this.signUpForm.get('password')?.value;
     /*this.userService.addUser(email, password).then(
       () => {
         this.router.navigate(['/products']);

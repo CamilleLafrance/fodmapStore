@@ -6,11 +6,13 @@ import { ProductPageComponent } from "./components/product-page/product-page.com
 import { UserComponent } from "./components/user/user.component";
 import { FourOhFourComponent } from "./components/four-oh-four/four-oh-four.component";
 import { SignInComponent } from "./components/sign-in/sign-in.component";
+import { SignUpComponent } from "./components/sign-up/sign-up.component";
 
 const routes: Routes = [
   { path: "", component: MainViewComponent },
   { path: "main-view", component: MainViewComponent },
   { path: "sign-in", component: SignInComponent },
+  { path: "sign-up", component: SignUpComponent },
   { path: "auth", component: AuthComponent },
   { path: "products/:id", component: ProductPageComponent },
   { path: "user-profile", component: UserComponent },

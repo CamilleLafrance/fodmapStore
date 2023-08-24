@@ -17,7 +17,8 @@ import { FooterComponent } from "./components/footer/footer.component";
 import { AuthService } from "./services/auth.service";
 import { FourOhFourComponent } from "./components/four-oh-four/four-oh-four.component";
 import { SignInComponent } from "./components/sign-in/sign-in.component";
-import { ReactiveFormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -35,11 +36,13 @@ import { ReactiveFormsModule } from "@angular/forms";
     FooterComponent,
     FourOhFourComponent,
     SignInComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
     ReactiveFormsModule,
   ],
   providers: [AuthService],
