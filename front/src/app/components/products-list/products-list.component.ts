@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
 import { Product } from 'src/model/product/product';
 
@@ -8,8 +8,6 @@ import { Product } from 'src/model/product/product';
   styleUrls: ['./products-list.component.css']
 })
 export class ProductsListComponent {
-
-  @Input() product: Product | undefined;
 
   listProducts: Array<Product> = [];
   
@@ -24,5 +22,5 @@ export class ProductsListComponent {
         console.error(messageError);
       }
     });
-  }
+  } 
 }

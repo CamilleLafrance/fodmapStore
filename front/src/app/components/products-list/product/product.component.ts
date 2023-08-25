@@ -1,5 +1,4 @@
 import { Component, Input } from "@angular/core";
-import { Router } from "@angular/router";
 import { ProductService } from "src/app/services/product.service";
 import { Product } from "src/model/product/product";
 
@@ -9,18 +8,11 @@ import { Product } from "src/model/product/product";
   styleUrls: ["./product.component.css"],
 })
 export class ProductComponent {
-
-  listProducts: Array<Product> = [];
-  router!: Router
-  @Input() product: Product | undefined;
-
-  constructor(private productService: ProductService) {}
+  
+  @Input() product!: Product;  
+  
+  constructor() {}
 
   ngOnInit(): void {
-    this.product;
-  }
-
-  redirectToProduct(productId: number): void {
-    this.router.navigate(['/products', productId]); 
   }
 }
