@@ -1,5 +1,5 @@
-@media (max-width: 576px) {
-    header {
-        display : none;
-    }
+.back {
+  padding: 0;
+  margin: 0;
+  background-size: cover; 
 }
