@@ -17,6 +17,7 @@ export class ProductComponent {
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
+    this.product;
   }
 
   redirectToProduct(productId: number): void {

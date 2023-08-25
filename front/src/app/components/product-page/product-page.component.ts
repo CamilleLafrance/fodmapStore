@@ -9,14 +9,20 @@ import { Product } from "src/model/product/product";
   styleUrls: ["./product-page.component.css"],
 })
 export class ProductPageComponent implements OnInit {
-
+ 
   @Input() product: Product | undefined;
+  
+  constructor(private productService: ProductService, private route: ActivatedRoute) {}
 
-  constructor() {}
-  // constructor(private productService: ProductService, private route: ActivatedRoute) {}
-
-  ngOnInit() {
-    // const id = this.route.snapshot.params['id'];
-    // this.product = this.productService.getProductById(+id).product;
-  }
+  ngOnInit(): void {
+    const id = this.route.snapshot.params['id'];
+    this.productService.getProductById(+id).subscribe({
+      next : data =>{ 
+        this.product = data;
+      },
+      error : messageError => {
+        console.error(messageError);
+      }
+    });
+  } 
 }

@@ -10,21 +10,7 @@ import { ProductService } from "./services/product.service";
 export class AppComponent {
   title = "fodmapStore";
 
-  product: Product | undefined;
+  constructor() {}
 
-  listProducts: Array<Product> = [];
-  
-
-  constructor(private productService: ProductService) {}
-
-  ngOnInit(): void {
-    this.productService.getAllProducts().subscribe({
-      next : data =>{ 
-        this.listProducts = data;
-      },
-      error : messageError => {
-        console.error(messageError);
-      }
-    });
-  }
+  ngOnInit(): void {}
 }
