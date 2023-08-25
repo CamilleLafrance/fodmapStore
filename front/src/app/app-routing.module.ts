@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: "sign-in", component: SignInComponent },
   { path: "sign-up", component: SignUpComponent },
   { path: "auth", component: AuthComponent },
-  { path: "products/:id", component: ProductPageComponent },
+  { path: "product", component: ProductPageComponent },
   { path: "user-profile", component: UserComponent },
   { path: "not-found", component: FourOhFourComponent },
   { path: "**", redirectTo: "/not-found" },

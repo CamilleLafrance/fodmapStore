@@ -1,0 +1,33 @@
+.card {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  
+}
+
+#product-link {
+  text-decoration: none;
+  color: black;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  img {
+    height: 12rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-title {
+    height: 50px;
+  }
+  img {
+  max-height: 148px;
+} 
+.card {
+  height: 22rem;
+}
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .card-title {
+    font-size: 1.09rem;
+  }
+}

@@ -4,7 +4,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { CategoryComponent } from "./components/category/category.component";
-import { ProductComponent } from "./components/product/product.component";
+import { ProductComponent } from "./components/products-list/product/product.component";
 import { OrderComponent } from "./components/order/order.component";
 import { UserComponent } from "./components/user/user.component";
 import { ProductPageComponent } from "./components/product-page/product-page.component";
@@ -19,6 +19,7 @@ import { FourOhFourComponent } from "./components/four-oh-four/four-oh-four.comp
 import { SignInComponent } from "./components/sign-in/sign-in.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { ProductsListComponent } from './components/products-list/products-list.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     FourOhFourComponent,
     SignInComponent,
     SignUpComponent,
+    ProductsListComponent,
   ],
   imports: [
     BrowserModule,
