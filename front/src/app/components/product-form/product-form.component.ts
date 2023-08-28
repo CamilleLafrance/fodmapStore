@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { CategoryService } from 'src/app/services/category.service';
 import { ProductService } from 'src/app/services/product.service';
+import { Category } from 'src/model/product/category';
 import { Product } from 'src/model/product/product';
 
 @Component({
@@ -11,10 +13,12 @@ import { Product } from 'src/model/product/product';
 export class ProductFormComponent {
 
   public productForm!: FormGroup;
+  listCategories: Array<Category> = [];
 
   constructor(
     private productService: ProductService,
     private formBuilder: FormBuilder,
+    private categoryService: CategoryService
   ) {}
 
   ngOnInit(): void {
@@ -27,6 +31,14 @@ export class ProductFormComponent {
       category: this.formBuilder.control(""),
       stockQuantity: this.formBuilder.control(""),
       weight: this.formBuilder.control("")
+    });
+    this.categoryService.getAllCategories().subscribe({
+      next : data =>{ 
+        this.listCategories = data;
+      },
+      error : messageError => {
+        console.error(messageError);
+      }
     });
   }
 

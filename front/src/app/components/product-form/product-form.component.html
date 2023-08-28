@@ -29,15 +29,39 @@
               </div>
             </div>
 
+            <div class="row justify-content-between text-left">
+              <!-- Weight input -->
+              <div class="form-group col-sm-6 flex-column d-flex py-3">
+                <label for="weight" class="form-label">Poids</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="weight"
+                  formControlName="weight"
+                />
+              </div>
+
+              <!-- Price input -->
+              <div class="form-group col-sm-6 flex-column d-flex py-3">
+                <label for="price" class="form-label">Prix en euros</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="price"
+                  formControlName="price"
+                />
+              </div>
+            </div>
+
             <!-- Description input -->
             <div class="form-group py-3">
               <label for="description" class="form-label">Description</label>
-              <input
+              <textarea
                 type="text"
                 class="form-control"
                 id="description"
                 formControlName="description"
-              />
+              ></textarea>
             </div>
 
             <!-- Image input -->
@@ -50,65 +74,43 @@
                 formControlName="image"
               />
             </div>
+
             <div class="row justify-content-between text-left">
-              <!-- Weight input -->
-              <div class="col">
-                <div class="form-group py-3">
-                  <label for="weight" class="form-label">Poids</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="weight"
-                    formControlName="weight"
-                  />
-                </div>
+              <!-- Stock quantity input -->
+              <div class="form-group col-sm-6 flex-column d-flex py-3">
+                <label for="stock-quantity" class="form-label"
+                  >Quantité en stock</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="stock-quantity"
+                  formControlName="stock-quantity"
+                />
               </div>
 
-              <!-- Price input -->
-              <div class="col">
+              <!-- Category select -->
                 <div class="form-group col-sm-6 flex-column d-flex py-3">
-                  <label for="price" class="form-label">Prix en euros</label>
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="price"
-                    formControlName="price"
-                  />
+                  <label for="category" style="margin-bottom: 0.5rem">Catégorie</label>
+                  <select id="category" name="category" class="form-select">
+                    <option value="" selected disabled>— — Choisir — —</option>
+                    <option
+                      *ngFor="let category of listCategories"
+                      [value]="category.id"
+                    >
+                      {{ category.name }}
+                    </option>
+                  </select>
                 </div>
-              </div>
-            </div>
-
-            <!-- Category input -->
-            <div class="form-group py-3">
-              <label for="category" class="form-label">Catégorie</label>
-              <input
-                type="text"
-                class="form-control"
-                id="category"
-                formControlName="category"
-              />
-            </div>
-
-            <!-- Stock quantity input -->
-            <div class="form-group py-3">
-              <label for="stock-quantity" class="form-label"
-                >Quantité en stock</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="stock-quantity"
-                formControlName="stock-quantity"
-              />
             </div>
 
             <!-- Submit button -->
             <div class="text-end">
               <button
-                class="btn btn-primary btn-block my-4"
+                class="btn btn-primary btn-block my-5"
                 type="submit"
                 [disabled]="productForm.invalid"
-                (click)="addProduct()"
+                (ngSubmit)="addProduct()"
               >
                 Soumettre
               </button>
