@@ -24,6 +24,7 @@
         class="btn btn-primary"
         type="submit"
         [disabled]="signInForm.invalid"
+        *ngIf="!authStatus" (click)="onSignIn()"
       >
         Valider
       </button>

@@ -1,11 +1,15 @@
-#navbar-right-links {
+#navbar-right-items {
     display: flex;
     flex-direction: column;
 }
 
 @media (min-width: 991.98px) { 
-    #navbar-right-links {
+    #navbar-right-items {
         display: flex;
         flex-direction: row;
     }
+    /* #navbar-right-items-login {
+        display: flex;
+        flex-direction: row;
+    } */
  }
