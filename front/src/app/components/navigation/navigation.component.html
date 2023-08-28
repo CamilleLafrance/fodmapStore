@@ -65,8 +65,11 @@
           Panier
           <span class="badge rounded-pill badge-notification bg-danger">1</span>
         </button>
-        <button class="btn btn-success" *ngIf="!authStatus" (click)="onSignIn()" style="width: fit-content" routerLink="sign-in">
+        <button class="btn btn-success" *ngIf="!authStatus" style="width: fit-content" routerLink="sign-in">
           Se connecter
+        </button>
+        <button class="btn btn-light" *ngIf="!authStatus" style="width: fit-content" routerLink="sign-up">
+          S'inscrire
         </button>
         <div *ngIf="authStatus" class="d-flex gap-3" id="navbar-right-items">
           <div class="nav-item dropdown">

@@ -23,6 +23,7 @@ export class SignInComponent implements OnInit {
     this.initForm();
     this.authStatus = this.authService.isAuth;
   }
+  
   // pattern : at least 8 characters in length, lowercase letters,uppercase letters, numbers, special characters
   initForm() {
     this.signInForm = this.formBuilder.group({ 

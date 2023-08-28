@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
@@ -12,16 +12,20 @@ import { User } from 'src/model/user/user';
 })
 export class SignUpComponent implements OnInit {
 
-  signUpForm!: FormGroup;
+  signUpForm!: FormGroup; 
+  @Input() authStatus: boolean | undefined;
 
   constructor(private formBuilder: FormBuilder, 
               private userService: UserService, 
-              private router: Router) {
+              private router: Router,
+              private authService: AuthService) {
   }
 
   ngOnInit() {
     this.initForm();
+    this.authStatus = this.authService.isAuth;
   }
+
   // pattern : at least 8 characters in length, lowercase letters,uppercase letters, numbers, special characters
   initForm() {
     this.signUpForm = this.formBuilder.group({ 
@@ -45,4 +49,11 @@ export class SignUpComponent implements OnInit {
     */
     
   }
+
+  onSignUp() {
+    this.authService.signIn().then(() => {
+      this.authStatus = this.authService.isAuth;
+      this.router.navigate(['user-profile']);
+    });
+  };
 }
