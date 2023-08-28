@@ -3,7 +3,6 @@ import { BrowserModule } from "@angular/platform-browser";
 import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { CategoryComponent } from "./components/category/category.component";
 import { ProductComponent } from "./components/products-list/product/product.component";
 import { OrderComponent } from "./components/order/order.component";
 import { UserComponent } from "./components/user/user.component";
@@ -24,7 +23,6 @@ import { ProductFormComponent } from "./components/product-form/product-form.com
 @NgModule({
   declarations: [
     AppComponent,
-    CategoryComponent,
     ProductComponent,
     OrderComponent,
     UserComponent,

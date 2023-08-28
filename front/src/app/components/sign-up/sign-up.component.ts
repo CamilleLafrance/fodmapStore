@@ -29,6 +29,8 @@ export class SignUpComponent implements OnInit {
   // pattern : at least 8 characters in length, lowercase letters,uppercase letters, numbers, special characters
   initForm() {
     this.signUpForm = this.formBuilder.group({
+      firstName : this.formBuilder.control(""),
+      lastName : this.formBuilder.control(""),
       email: ["", [Validators.required, Validators.email]],
       password: [
         "",
@@ -38,8 +40,7 @@ export class SignUpComponent implements OnInit {
             "(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-zd$@$!%*?&].{8,}"
           ),
         ],
-      ],
-      // nom : this.formBuilder.control(""),
+      ], 
     });
   }
 
