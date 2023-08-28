@@ -11,15 +11,15 @@ import { ProductPageComponent } from "./components/product-page/product-page.com
 import { NavigationComponent } from "./components/navigation/navigation.component";
 import { NavigationCategoriesComponent } from "./components/navigation-categories/navigation-categories.component";
 import { MainViewComponent } from "./components/main-view/main-view.component";
-import { AuthComponent } from "./components/auth/auth.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { AuthService } from "./services/auth.service";
 import { FourOhFourComponent } from "./components/four-oh-four/four-oh-four.component";
 import { SignInComponent } from "./components/sign-in/sign-in.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { SignUpComponent } from './components/sign-up/sign-up.component';
-import { ProductsListComponent } from './components/products-list/products-list.component';
+import { SignUpComponent } from "./components/sign-up/sign-up.component";
+import { ProductsListComponent } from "./components/products-list/products-list.component";
+import { ProductFormComponent } from "./components/product-form/product-form.component";
 
 @NgModule({
   declarations: [
@@ -31,7 +31,6 @@ import { ProductsListComponent } from './components/products-list/products-list.
     ProductPageComponent,
     NavigationComponent,
     NavigationCategoriesComponent,
-    AuthComponent,
     MainViewComponent,
     HeaderComponent,
     FooterComponent,
@@ -39,6 +38,7 @@ import { ProductsListComponent } from './components/products-list/products-list.
     SignInComponent,
     SignUpComponent,
     ProductsListComponent,
+    ProductFormComponent,
   ],
   imports: [
     BrowserModule,
