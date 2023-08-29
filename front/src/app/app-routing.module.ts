@@ -8,6 +8,7 @@ import { SignInComponent } from "./components/sign-in/sign-in.component";
 import { SignUpComponent } from "./components/sign-up/sign-up.component";
 import { ProductFormComponent } from "./components/product-form/product-form.component";
 import { AboutUsComponent } from "./components/about-us/about-us.component";
+import { UserFormComponent } from "./user-form/user-form.component";
 
 const routes: Routes = [
   { path: "", component: MainViewComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: "products/:id", component: ProductPageComponent },
   { path: "products-add", component: ProductFormComponent },
   { path: "user-profile", component: UserComponent },
+  { path: "user-form", component: UserFormComponent },
   { path: "not-found", component: FourOhFourComponent },
   { path: "**", redirectTo: "/not-found" },
 ];

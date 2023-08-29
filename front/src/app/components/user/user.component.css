@@ -1,0 +1,140 @@
+#sidebar {
+    padding: 15px 0px 15px 0px;
+    border-radius: 10px; 
+    background-color: #f5f5f5;
+}
+
+#sidebar h4 {
+    font-weight: 500; 
+    color: rgb(40, 38, 38);
+}
+
+#sidebar ul {
+    list-style: none;  
+}
+
+#sidebar ul li {
+    padding: 10px 0;
+    display: block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-left: 5px solid transparent;
+}
+
+#sidebar ul li.active {
+    border-left: 5px solid #ff5252;
+    background-color: #c4bbb9;
+}
+
+#sidebar ul li a {
+    display: block;
+}
+
+#sidebar ul li a .link {
+    color: #110a0a;
+    font-weight: 500;
+}
+
+#sidebar ul li a .link-desc {
+    font-size: 0.8rem;
+    color: #5c5555;
+}
+
+#main-content { 
+    border-radius: 15px;
+}
+
+#main-content .text-uppercase {
+    font-weight: 600; 
+}
+
+#main-content .box {
+    padding: 10px;
+    border-radius: 6px;
+    width: 170px;
+    height: 90px;
+}
+
+#main-content .box img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+#main-content .box .tag {
+    font-size: 0.9rem;
+    color: #000;
+    font-weight: 500;
+}
+
+#main-content .box .number {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.order {
+    /* padding: 10px 30px; */
+    min-height: 110px;
+}
+
+.order .blue-label {
+    background-color: #cccce9;
+    color: #2659c7;
+    font-size: 0.9rem; 
+    width: fit-content;
+}
+
+.order .fs-8 {
+    font-size: 0.85rem;
+}
+
+.order .status {
+    font-weight: 600;
+}
+
+.order .btn.btn-primary {
+    background-color: #fff;
+    color: #4e2296;
+    border: 1px solid #4e2296;
+}
+
+.order .btn.btn-primary:hover {
+    background-color: #4e2296;
+    color: #fff;
+}
+
+.bg-light {
+    background-color: #f0ecec !important;
+}
+ 
+@media(max-width: 1199.5px) {
+    nav ul li {
+        padding: 0 10px;
+    }
+}
+
+@media(max-width: 440px) {
+    #main-content {
+        padding: 20px;
+    }
+
+    .order {
+        padding: 20px;
+    }
+}
+
+@media(max-width: 395px) {
+    .order .btn.btn-primary {
+        font-size: 0.85rem;
+    }
+}
+
+@media(max-width: 355px) {
+    #main-content {
+        padding: 15px;
+    }
+
+    .order {
+        padding: 10px;
+    }
+}

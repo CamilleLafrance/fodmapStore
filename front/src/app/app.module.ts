@@ -4,7 +4,6 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { ProductComponent } from "./components/products-list/product/product.component";
-import { OrderComponent } from "./components/order/order.component";
 import { UserComponent } from "./components/user/user.component";
 import { ProductPageComponent } from "./components/product-page/product-page.component";
 import { NavigationComponent } from "./components/navigation/navigation.component";
@@ -20,12 +19,12 @@ import { SignUpComponent } from "./components/sign-up/sign-up.component";
 import { ProductsListComponent } from "./components/products-list/products-list.component";
 import { ProductFormComponent } from "./components/product-form/product-form.component";
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import { UserFormComponent } from './user-form/user-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
-    OrderComponent,
     UserComponent,
     ProductPageComponent,
     NavigationComponent,
@@ -39,6 +38,7 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
     ProductsListComponent,
     ProductFormComponent,
     AboutUsComponent,
+    UserFormComponent,
   ],
   imports: [
     BrowserModule,
