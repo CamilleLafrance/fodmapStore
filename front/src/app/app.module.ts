@@ -19,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { SignUpComponent } from "./components/sign-up/sign-up.component";
 import { ProductsListComponent } from "./components/products-list/products-list.component";
 import { ProductFormComponent } from "./components/product-form/product-form.component";
+import { AboutUsComponent } from './components/about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { ProductFormComponent } from "./components/product-form/product-form.com
     SignUpComponent,
     ProductsListComponent,
     ProductFormComponent,
+    AboutUsComponent,
   ],
   imports: [
     BrowserModule,

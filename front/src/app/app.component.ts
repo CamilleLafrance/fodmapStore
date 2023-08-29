@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { Product } from "src/model/product/product";
 import { ProductService } from "./services/product.service";
-import { Router } from "@angular/router";
+import { NavigationEnd, Router } from "@angular/router";
 import { AuthService } from "./services/auth.service";
 
 @Component({
@@ -13,11 +13,21 @@ export class AppComponent {
   title = "fodmapStore";
 
   authStatus: boolean | undefined;
+  isAboutUsPage: boolean = false;
 
   constructor(private router: Router, private authService: AuthService) {}
 
   ngOnInit(): void {
     this.authStatus = this.authService.isAuth;
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.isAboutUsPage = this.isRouteAboutUs(event.url);
+      }
+    });
+  }
+
+  isRouteAboutUs(url: string): boolean {
+    return url.includes('/about-us');
   }
 
   onSignIn() {

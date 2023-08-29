@@ -1,0 +1,146 @@
+<div class="container-fluid p-5 m-1">
+  <div class="card border-0 rounded-3 shadow-lg overflow-hidden p-5 m-5">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-6 order-2 order-lg-1">
+        <h1 class="text-center">À propos</h1>
+        <p class="m-4 p-4">
+          Le syndrome de l'intestin irritable (SII) peut rendre les choix
+          alimentaires complexes et souvent frustrants. C'est pourquoi nous
+          avons créé Fodmapment vôtre, avec une vision claire : fournir des
+          produits délicieux et spécialement conçus pour convenir à un régime
+          pauvre en Fodmap.
+        </p>
+      </div>
+      <div class="col-lg-4 col-sm-7 px-5 mx-auto order-1 order-lg-2">
+        <img
+          src="../../../assets/salad.png"
+          alt=""
+          class="img-fluid mb-5 mb-lg-5"
+        />
+      </div>
+    </div>
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-4 col-sm-7 px-5 mx-auto">
+        <img
+          src="../../../assets/vegetables.png"
+          alt=""
+          class="img-fluid mb-5 mb-lg-5"
+        />
+      </div>
+      <div class="col-lg-6">
+        <h2 class="text-center">C'est quoi un Fodmap ?</h2>
+        <p class="m-4 p-4">
+          Les Fodmap (Fermentescibles Oligosaccharides, Disaccharides,
+          Monosaccharides, et Polyols) sont des glucides fermentescibles pouvant
+          provoquer des symptômes gênants chez les personnes sensibles.
+        </p>
+        <div class="row justify-content-center">
+          <a
+            href="#"
+            class="btn btn-light px-5 rounded-pill shadow-sm"
+            style="width: fit-content"
+            >En savoir plus</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-6 col-xl-6 col-lg-6 col-sm-10">
+      <div class="card border-0 rounded-3 shadow-lg overflow-hidden">
+        <div class="card-body p-0">
+          <div class="col p-4">
+            <div class="text-center">
+              <h3 class="m-4 fw-light">Nous contacter</h3>
+            </div>
+            <form>
+              <!-- Name input -->
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  id="name"
+                  type="text"
+                  placeholder="Prénom Nom"
+                  data-sb-validations="required"
+                />
+                <label for="name">Prénom Nom</label>
+                <div class="invalid-feedback" data-sb-feedback="name:required">
+                  Votre nom est requis
+                </div>
+              </div>
+
+              <!-- Email input -->
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  id="emailAddress"
+                  type="email"
+                  placeholder="Courriel"
+                  data-sb-validations="required,email"
+                />
+                <label for="emailAddress">Courriel</label>
+                <div
+                  class="invalid-feedback"
+                  data-sb-feedback="emailAddress:required"
+                >
+                  Le courriel est requis
+                </div>
+                <div
+                  class="invalid-feedback"
+                  data-sb-feedback="emailAddress:email"
+                >
+                  Le courriel n'est pas valide
+                </div>
+              </div>
+
+              <!-- Message input -->
+              <div class="form-floating mb-3">
+                <textarea
+                  class="form-control"
+                  id="message"
+                  type="text"
+                  placeholder="Message"
+                  style="height: 10rem"
+                  data-sb-validations="required"
+                ></textarea>
+                <label for="message">Message</label>
+                <div
+                  class="invalid-feedback"
+                  data-sb-feedback="message:required"
+                >
+                  Un message est requis
+                </div>
+              </div>
+
+              <!-- Submit success message -->
+              <div class="d-none" id="submitSuccessMessage">
+                <div class="text-center mb-3">
+                  <div class="fw-bolder">Votre message a été envoyé !</div>
+                </div>
+              </div>
+
+              <!-- Submit error message -->
+              <div class="d-none" id="submitErrorMessage">
+                <div class="text-center text-danger mb-3">
+                  Erreur dans l'envoi du message !
+                </div>
+              </div>
+
+              <!-- Submit button -->
+              <div class="d-grid">
+                <button
+                  class="btn btn-primary btn-lg disabled"
+                  id="submitButton"
+                  type="submit"
+                >
+                  Valider
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

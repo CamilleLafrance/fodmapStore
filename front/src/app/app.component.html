@@ -2,7 +2,7 @@
 <app-navigation></app-navigation>
 
 <!-- Header -->
-<app-header></app-header> 
+<app-header *ngIf="!isAboutUsPage"></app-header> 
 
 <div class="row">
   <router-outlet></router-outlet>

@@ -7,10 +7,12 @@ import { FourOhFourComponent } from "./components/four-oh-four/four-oh-four.comp
 import { SignInComponent } from "./components/sign-in/sign-in.component";
 import { SignUpComponent } from "./components/sign-up/sign-up.component";
 import { ProductFormComponent } from "./components/product-form/product-form.component";
+import { AboutUsComponent } from "./components/about-us/about-us.component";
 
 const routes: Routes = [
   { path: "", component: MainViewComponent },
   { path: "main-view", component: MainViewComponent },
+  { path: "about-us", component: AboutUsComponent },
   { path: "sign-in", component: SignInComponent },
   { path: "sign-up", component: SignUpComponent }, 
   { path: "products/:id", component: ProductPageComponent },
