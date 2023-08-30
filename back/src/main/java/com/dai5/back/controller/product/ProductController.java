@@ -43,7 +43,6 @@ public class ProductController {
 
      */
 
-    // -- NOT TESTED --
     // DELETE
     @DeleteMapping("/products/{idProduct}")
     public void deleteProduct(@PathVariable Integer idProduct){
