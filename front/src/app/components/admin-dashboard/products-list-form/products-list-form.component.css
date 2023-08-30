@@ -1,0 +1,47 @@
+#main-content {
+  border-radius: 15px;
+  min-height: 400px;
+}
+
+#main-content .text-uppercase {
+  font-weight: 600;
+}
+
+#main-content .box {
+  padding: 10px;
+  border-radius: 6px;
+  width: 190px;
+  height: 150px;
+}
+
+#main-content .box img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+#main-content .box .tag {
+  color: black;
+  font-weight: 500;
+  height: 50px;
+}
+button {
+  border: none;
+}
+#edit-product {
+  position: relative;
+  top: -140px;
+  left: 96px;
+}
+
+#delete-product {
+  position: relative;
+  top: -115px;
+  left: 69px;
+}
+
+.badge img {
+  max-height: 15px;
+  max-width: 10px;
+  object-fit: contain;
+}
