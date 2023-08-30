@@ -51,9 +51,6 @@ public class OrderService {
     public void updateOrderTotals(Order order) {
 
         order.getTotals();
-        // Pas besoin de sauvegarder explicitement, car
-        // la transaction gère la mise à jour en base de données
-        // SINON : orderRepository.save(order);
     }
 
     // -- NOT TESTED --

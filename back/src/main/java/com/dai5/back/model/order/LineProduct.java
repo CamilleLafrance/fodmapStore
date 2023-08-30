@@ -17,13 +17,10 @@ public class LineProduct {
     @Column(name = "id", nullable = false)
     private Integer id;
 
-    // @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "order_id", nullable = false)
     private Order order;
 
-    // -- Est-ce utile ici ? --
-    // @JsonBackReference
     @OneToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "product_id", nullable = false)
     private Product product;

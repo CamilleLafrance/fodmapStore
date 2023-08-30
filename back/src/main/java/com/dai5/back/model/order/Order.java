@@ -1,6 +1,7 @@
 package com.dai5.back.model.order;
 
 import com.dai5.back.model.user.User;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -20,8 +21,6 @@ public class Order {
     @Column(name = "id", nullable = false)
     private Integer id;
 
-    // -- Est-ce utile ici ? --
-    // @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
@@ -32,13 +31,12 @@ public class Order {
     @Column(name = "total_discount", precision = 10, scale = 2)
     private BigDecimal totalDiscount;
 
-    // -- Est-ce utile ici ? --
-    // @JsonBackReference
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_status_id")
     private OrderStatus orderStatus;
 
     // -- NOT TESTED --
+    @JsonBackReference
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<LineProduct> linesProducts = new ArrayList<>();
 
@@ -51,11 +49,12 @@ public class Order {
     @Column(name = "delivered_at")
     private Date deliveredAt;
 
+    // -- NOT TESTED --
     @Transient
     public void getTotals() {
         BigDecimal newTotalOrder = BigDecimal.ZERO;
         for (LineProduct lineProduct : linesProducts) {
-            lineProduct.getLineProductWithDiscount(); // Recalculer le prix total avec remise pour chaque ligne
+            lineProduct.getLineProductWithDiscount();
             BigDecimal lineProductTotalWithDiscount = lineProduct.getTotalPrice();
             newTotalOrder = newTotalOrder.add(lineProductTotalWithDiscount);
         }

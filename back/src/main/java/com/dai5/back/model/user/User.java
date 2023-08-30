@@ -55,6 +55,7 @@ public class User {
     private Boolean isAdmin;
 
     /*
+    @JsonBackReference
     @OneToMany(mappedBy = "user",
             fetch = FetchType.LAZY)
     private List<Order> orders = new ArrayList<>();

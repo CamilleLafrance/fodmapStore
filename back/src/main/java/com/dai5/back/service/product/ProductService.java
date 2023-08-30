@@ -7,7 +7,6 @@ import com.dai5.back.repository.product.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -16,7 +15,6 @@ public class ProductService {
     @Autowired
     private ProductRepository productRepository;
 
-    // -- DOESN'T WORK --
     // CREATE
     public Product create(Product product){
 

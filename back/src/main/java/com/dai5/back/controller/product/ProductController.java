@@ -1,7 +1,6 @@
 package com.dai5.back.controller.product;
 
 import com.dai5.back.model.product.Product;
-import com.dai5.back.service.product.CategoryService;
 import com.dai5.back.service.product.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,27 +13,23 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    // -- USELESS ? --
-    @Autowired
-    private CategoryService categoryService;
-
-    // -- DOESN'T WORK --
-
     // POST
-    @PostMapping("/products")
+    @PostMapping("/products/add")
     public Product addProduct(@RequestBody Product product){
+
         return this.productService.create(product);
     }
-
 
     // GET
     @GetMapping("/products")
     public List<Product> getAllProducts(){
+
         return this.productService.getAll();
     }
 
     @GetMapping("/products/{idProduct}")
     public Product getProduct(@PathVariable Integer idProduct){
+
         return this.productService.getById(idProduct);
     }
 
