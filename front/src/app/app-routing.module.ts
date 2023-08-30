@@ -6,18 +6,20 @@ import { UserComponent } from "./components/user/user.component";
 import { FourOhFourComponent } from "./components/four-oh-four/four-oh-four.component";
 import { SignInComponent } from "./components/sign-in/sign-in.component";
 import { SignUpComponent } from "./components/sign-up/sign-up.component";
-import { ProductFormComponent } from "./components/product-form/product-form.component";
+import { ProductFormComponent } from "./components/admin-dashboard/product-form/product-form.component";
 import { AboutUsComponent } from "./components/about-us/about-us.component";
-import { UserFormComponent } from "./user-form/user-form.component";
+import { UserFormComponent } from "./components/user/user-form/user-form.component";
+import { AdminDashboardComponent } from "./components/admin-dashboard/admin-dashboard.component";
 
 const routes: Routes = [
   { path: "", component: MainViewComponent },
   { path: "main-view", component: MainViewComponent },
   { path: "about-us", component: AboutUsComponent },
   { path: "sign-in", component: SignInComponent },
-  { path: "sign-up", component: SignUpComponent }, 
+  { path: "sign-up", component: SignUpComponent },
   { path: "products/:id", component: ProductPageComponent },
   { path: "products-add", component: ProductFormComponent },
+  { path: "admin-dashboard", component: AdminDashboardComponent },
   { path: "user-profile", component: UserComponent },
   { path: "user-form", component: UserFormComponent },
   { path: "not-found", component: FourOhFourComponent },

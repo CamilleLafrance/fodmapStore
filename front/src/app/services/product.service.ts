@@ -13,13 +13,8 @@ export class ProductService {
 
   // CREATE
   public addProduct(product : Product): Observable<Product>{
-    return this.http.post<Product>(this.baseURL + "/products", product);
-  }
-  /*
-  saveProduct() {
-    this.http.post(this.baseUrl)
-  }
-  */
+    return this.http.post<Product>(this.baseURL + "/products/add", product);
+  } 
 
   // READ
   public getAllProducts(): Observable<Array<Product>> {
