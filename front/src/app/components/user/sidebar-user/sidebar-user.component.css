@@ -1,0 +1,45 @@
+.bg-light {
+    background-color: #f5f5f5 !important;
+}
+
+#sidebar {
+    padding: 15px 0px 15px 0px;
+    border-radius: 10px; 
+    background-color: #f5f5f5;
+}
+
+#sidebar h4 {
+    font-weight: 500; 
+    color: black;
+}
+
+#sidebar ul {
+    list-style: none;  
+}
+
+#sidebar ul li {
+    padding: 10px 0;
+    display: block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-left: 5px solid transparent;
+}
+
+#sidebar ul li.active {
+    border-left: 5px solid #e40f0f;
+    background-color: #c4bbb9;
+}
+
+#sidebar ul li a {
+    display: block;
+}
+
+#sidebar ul li a .link {
+    color: #110a0a;
+    font-weight: 500;
+}
+
+#sidebar ul li a .link-desc {
+    font-size: 0.8rem;
+    color: #5c5555;
+}

@@ -24,6 +24,8 @@ import { AdminDashboardComponent } from "./components/admin-dashboard/admin-dash
 import { ProductManagerComponent } from './components/admin-dashboard/product-manager/product-manager.component';
 import { SidebarComponent } from './components/admin-dashboard/sidebar/sidebar.component';
 import { ProductsListFormComponent } from './components/admin-dashboard/products-list-form/products-list-form.component';
+import { SidebarUserComponent } from './components/user/sidebar-user/sidebar-user.component';
+import { UserDashboardComponent } from './components/user/user-dashboard/user-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,8 @@ import { ProductsListFormComponent } from './components/admin-dashboard/products
     ProductManagerComponent,
     SidebarComponent,
     ProductsListFormComponent,
+    SidebarUserComponent,
+    UserDashboardComponent,
   ],
   imports: [
     BrowserModule,
