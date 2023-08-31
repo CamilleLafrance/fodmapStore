@@ -32,9 +32,9 @@ public class CategoryService {
 
     // -- NOT TESTED --
     // UPDATE
-    public void update(Category category) {
+    public Category update(Category updatedCategory) {
 
-        this.categoryRepository.save(category);
+        return this.categoryRepository.save(updatedCategory);
     }
 
     // DELETE

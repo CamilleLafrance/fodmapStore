@@ -29,12 +29,11 @@ public class UserService {
         return userRepository.findById(id).orElse(null);
     }
 
-    /* -- DOESN'T WORK --
+    // -- NOT TESTED --
     // UPDATE
-    public User update(User user) {
-        return this.userRepository.save(user);
+    public User update(User updatedUser) {
+        return this.userRepository.save(updatedUser);
     }
-     */
 
     // DELETE
     public void delete(Integer id) {

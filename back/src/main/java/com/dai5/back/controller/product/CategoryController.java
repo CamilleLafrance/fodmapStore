@@ -34,14 +34,12 @@ public class CategoryController {
         return this.categoryService.getById(idCategory);
     }
 
-    /* -- DOESN'T WORK / NOT TESTED --
+    // -- NOT TESTED --
     // PUT
-    @PutMapping("/categories/{idCategory}")
-    public Category updateCategory(@PathVariable Integer idCategory, @RequestBody Category categoryDetails){
-        return categoryService.update(idCategory, categoryDetails);
+    @PutMapping("/categories/update")
+    public Category updateCategory(@RequestBody Category updatedCategory){
+        return categoryService.update(updatedCategory);
     }
-
-     */
 
     // DELETE
     @DeleteMapping("/categories/{idCategory}")

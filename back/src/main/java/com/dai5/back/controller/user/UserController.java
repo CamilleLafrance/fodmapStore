@@ -33,13 +33,13 @@ public class UserController {
         return this.userService.getById(idUser);
     }
 
-    /* -- DOESN'T WORK --
+    // -- NOT TESTED --
     // PUT
-    @PutMapping("/users/{idUser}")
-    public User updateUser(@PathVariable Integer idUser, @RequestBody User updatedUser){
-        return userService.update(idUser, userDetails);
+    @PutMapping("/users/update")
+    public User updateUser(@RequestBody User updatedUser){
+
+        return userService.update(updatedUser);
     }
-    */
 
     // DELETE
     @DeleteMapping("/users/{idUser}")

@@ -31,7 +31,6 @@ public class ProductService {
         return this.productRepository.findById(id).orElse(null);
     }
 
-    // -- NOT TESTED --
     // UPDATE
     public Product update(Product updatedProduct) {
 

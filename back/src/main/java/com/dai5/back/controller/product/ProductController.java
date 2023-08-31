@@ -33,7 +33,6 @@ public class ProductController {
         return this.productService.getById(idProduct);
     }
 
-    // -- NOT TESTED --
     // PUT
     @PutMapping("/products/update")
     public Product updateProduct(@RequestBody Product updatedProduct) {
