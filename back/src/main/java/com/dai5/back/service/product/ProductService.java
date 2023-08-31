@@ -1,8 +1,6 @@
 package com.dai5.back.service.product;
 
-import com.dai5.back.model.order.Order;
 import com.dai5.back.model.product.Product;
-import com.dai5.back.repository.product.CategoryRepository;
 import com.dai5.back.repository.product.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -35,9 +33,9 @@ public class ProductService {
 
     // -- NOT TESTED --
     // UPDATE
-    public void update(Product product) {
+    public Product update(Product updatedProduct) {
 
-        this.productRepository.save(product);
+        return this.productRepository.save(updatedProduct);
     }
 
     // DELETE

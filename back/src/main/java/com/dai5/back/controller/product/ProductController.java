@@ -33,15 +33,13 @@ public class ProductController {
         return this.productService.getById(idProduct);
     }
 
-    // -- DOESN'T WORK / NOT TESTED --
+    // -- NOT TESTED --
     // PUT
-    /*
-    @PutMapping("/products/{idProduct}")
-    public Product updateProduct(@PathVariable Integer idProduct, @RequestBody Product productDetails){
-        return productService.update(idProduct, productDetails);
-    }
+    @PutMapping("/products/update")
+    public Product updateProduct(@RequestBody Product updatedProduct) {
 
-     */
+        return productService.update(updatedProduct);
+    }
 
     // DELETE
     @DeleteMapping("/products/{idProduct}")
