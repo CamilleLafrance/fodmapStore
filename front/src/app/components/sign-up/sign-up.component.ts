@@ -32,15 +32,16 @@ export class SignUpComponent implements OnInit {
       firstName : this.formBuilder.control(""),
       lastName : this.formBuilder.control(""),
       email: ["", [Validators.required, Validators.email]],
-      password: [
-        "",
-        [
-          Validators.required,
-          Validators.pattern(
-            "(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-zd$@$!%*?&].{8,}"
-          ),
-        ],
-      ], 
+      password: this.formBuilder.control(""),
+      // password: [
+      //   "",
+      //   [
+      //     Validators.required,
+      //     Validators.pattern(
+      //       "(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-zd$@$!%*?&].{8,}"
+      //     ),
+      //   ],
+      // ], 
     });
   }
 

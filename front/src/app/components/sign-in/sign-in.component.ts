@@ -28,8 +28,10 @@ export class SignInComponent implements OnInit {
   // pattern : at least 8 characters in length, lowercase letters,uppercase letters, numbers, special characters
   initForm() {
     this.signInForm = this.formBuilder.group({ 
+      // email: ['', [Validators.required, Validators.email]],
+      // password: ['', [Validators.required, Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}')]],
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}')]],
+      password: this.formBuilder.control(""),
     })
   }
 

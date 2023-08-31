@@ -10,8 +10,8 @@
 #main-content .box {
     padding: 10px;
     border-radius: 6px;
-    width: 190px;
-    height: 100px;
+    min-width: 217px;
+    min-height: 120px;
 }
 
 #main-content .box img {

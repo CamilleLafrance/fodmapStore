@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { Product } from "src/model/product/product";
 import { ProductService } from "./services/product.service";
 import { NavigationEnd, Router } from "@angular/router";
@@ -40,5 +40,6 @@ export class AppComponent {
   onSignOut() {
     this.authService.signOut();
     this.authStatus = this.authService.isAuth;
+    this.router.navigate(['main-view']);
   }
 }

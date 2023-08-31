@@ -26,5 +26,6 @@ export class NavigationComponent {
   onSignOut() {
     this.authService.signOut();
     this.authStatus = this.authService.isAuth;
+    this.router.navigate(['main-view']);
   }
 }
