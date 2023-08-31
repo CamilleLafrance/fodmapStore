@@ -1,9 +1,3 @@
-.box img {
-  width: 70px;
-  height: 70px;
-  object-fit: contain;
-}
-
 .bg-white {
   border-radius: 15px;
 }
@@ -37,20 +31,6 @@ label {
   font-size: 0.8rem;
   margin-top: 15px;
 }
-
-@media (max-width: 768px) {
-  h2 {
-    text-align: center;
-  }
-}
-
-@media (min-width: 768px) {
-  h2 {
-    text-align: left;
-    margin-left: 20px;
-  }
-}
-
 
 @media (max-width: 768px) {
   h2 {

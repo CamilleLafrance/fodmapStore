@@ -34,7 +34,7 @@
     min-height: 110px;
 }
 
-.order .blue-label {
+.order .status-label {
     background-color: rgb(234, 228, 58);
     color: black;
     font-size: 0.9rem; 

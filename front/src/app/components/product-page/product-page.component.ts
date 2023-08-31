@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from "@angular/core";
-import { ActivatedRoute, Router } from "@angular/router";
-import { CategoryService } from "src/app/services/category.service";
+import { ActivatedRoute, Router } from "@angular/router"; 
 import { ProductService } from "src/app/services/product.service";
 import { Category } from "src/model/product/category";
 import { Product } from "src/model/product/product";
@@ -15,7 +14,7 @@ export class ProductPageComponent implements OnInit {
   @Input() product!: Product; 
   category: Category | undefined;
   
-  constructor(private productService: ProductService, private categoryService: CategoryService,private route: ActivatedRoute) {}
+  constructor(private productService: ProductService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {

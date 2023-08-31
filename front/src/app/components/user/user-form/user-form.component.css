@@ -1,53 +1,88 @@
-.bg-light {
-    background-color: #f5f5f5 !important;
-}
-
 #sidebar {
-    padding: 15px 0px 15px 0px;
-    border-radius: 10px; 
-    background-color: #f5f5f5;
+  padding: 15px 0px 15px 0px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
 }
 
 #sidebar h4 {
-    font-weight: 500; 
-    color: black;
+  font-weight: 500;
+  color: black;
 }
 
 #sidebar ul {
-    list-style: none;  
+  list-style: none;
 }
 
 #sidebar ul li {
-    padding: 10px 0;
-    display: block;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    border-left: 5px solid transparent;
+  padding: 10px 0;
+  display: block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-left: 5px solid transparent;
 }
 
 #sidebar ul li.active {
-    border-left: 5px solid #e40f0f;
-    background-color: #c4bbb9;
+  border-left: 5px solid #e40f0f;
+  background-color: #c4bbb9;
 }
 
 #sidebar ul li a {
-    display: block;
+  display: block;
 }
 
 #sidebar ul li a .link {
-    color: #110a0a;
-    font-weight: 500;
+  color: #110a0a;
+  font-weight: 500;
 }
 
 #sidebar ul li a .link-desc {
-    font-size: 0.8rem;
-    color: #5c5555;
+  font-size: 0.8rem;
+  color: #5c5555;
 }
 
-#main-content { 
-    border-radius: 15px;
+#main-content {
+  border-radius: 15px;
 }
 
-#main-content .text-uppercase {
-    font-weight: 600; 
+.form-control:focus {
+  box-shadow: none;
+  border-color: black;
+}
+
+.profile-button {
+  background: #e40f0f;
+  box-shadow: none;
+  border: none;
+}
+
+.profile-button:hover {
+  background: black;
+}
+
+.profile-button:focus {
+  background: black;
+  box-shadow: none;
+}
+
+.profile-button:active {
+  background: black;
+  box-shadow: none;
+}
+
+.label {
+  font-size: 0.8rem;
+  margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  h2 {
+    text-align: left;
+    margin-left: 20px;
+  }
 }

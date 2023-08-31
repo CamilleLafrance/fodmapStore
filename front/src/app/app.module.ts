@@ -26,6 +26,7 @@ import { SidebarComponent } from './components/admin-dashboard/sidebar/sidebar.c
 import { ProductsListFormComponent } from './components/admin-dashboard/products-list-form/products-list-form.component';
 import { SidebarUserComponent } from './components/user/sidebar-user/sidebar-user.component';
 import { UserDashboardComponent } from './components/user/user-dashboard/user-dashboard.component';
+import { ProductModifyComponent } from './components/admin-dashboard/product-modify/product-modify.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { UserDashboardComponent } from './components/user/user-dashboard/user-da
     ProductsListFormComponent,
     SidebarUserComponent,
     UserDashboardComponent,
+    ProductModifyComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,69 +1,111 @@
 <div class="container mt-5">
-    <div class="row g-2">
-      <div class="col-lg-3 my-lg-0 my-md-2">
-        <div id="sidebar">
-          <h4 class="ps-4">Mon compte</h4>
-          <ul class="m-0 ps-1">
-            <li>
-              <a
-                class="text-decoration-none d-flex align-items-start"
-                routerLink="user-profile"
-              >
-                <div class="d-flex flex-column">
-                  <div class="link">Mon compte</div>
-                  <div class="link-desc">Gérer mon compte</div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a
-                class="text-decoration-none d-flex align-items-start"
-                routerLink="orders"
-              >
-                <div class="d-flex flex-column">
-                  <div class="link">Mes commandes</div>
-                  <div class="link-desc">Gérer mes commandes/retours</div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="text-decoration-none d-flex align-items-start">
-                <div class="d-flex flex-column">
-                  <div class="link">Mes adresses</div>
-                  <div class="link-desc">Gérer mes adresses</div>
-                </div>
-              </a>
-            </li>
-            <li class="active">
-              <a
-                class="text-decoration-none d-flex align-items-start"
-                routerLink="/user-form"
-              >
-                <div class="d-flex flex-column">
-                  <div class="link">Mon profil</div>
-                  <div class="link-desc">Changer les infos de mon profil</div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="text-decoration-none d-flex align-items-start">
-                <div class="d-flex flex-column">
-                  <div class="link">Aide & Support</div>
-                  <div class="link-desc">Contacter le support</div>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
+  <div class="row g-2">
+    <div class="col-lg-3 my-lg-0 my-md-2">
+      <div id="sidebar">
+        <h4 class="ps-4">Mon compte</h4>
+        <ul class="m-0 ps-1">
+          <li>
+            <a
+              class="text-decoration-none d-flex align-items-start"
+              routerLink="/user-profile"
+            >
+              <div class="d-flex flex-column">
+                <div class="link">Mon compte</div>
+                <div class="link-desc">Gérer mon compte</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-decoration-none d-flex align-items-start"
+              routerLink="orders"
+            >
+              <div class="d-flex flex-column">
+                <div class="link">Mes commandes</div>
+                <div class="link-desc">Gérer mes commandes/retours</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="text-decoration-none d-flex align-items-start">
+              <div class="d-flex flex-column">
+                <div class="link">Mes adresses</div>
+                <div class="link-desc">Gérer mes adresses</div>
+              </div>
+            </a>
+          </li>
+          <li class="active">
+            <a
+              class="text-decoration-none d-flex align-items-start"
+              routerLink="/user-form"
+            >
+              <div class="d-flex flex-column">
+                <div class="link">Mon profil</div>
+                <div class="link-desc">Changer les infos de mon profil</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="text-decoration-none d-flex align-items-start">
+              <div class="d-flex flex-column">
+                <div class="link">Aide & Support</div>
+                <div class="link-desc">Contacter le support</div>
+              </div>
+            </a>
+          </li>
+        </ul>
       </div>
-      <div class="col-lg-9 my-lg-0 mb-5">
-        <div id="main-content" class="bg-white border p-4">
-          <div class="d-flex flex-column">
-            <h5>Bonjour Camille,</h5>
-            <div>Connecté en tant que : email@email.com</div>
+    </div>
+    <div class="col-lg-9 my-lg-0 my-md-2 mb-5">
+      <div id="main-content" class="bg-white border p-5">
+        <div class="d-flex flex-column justify-content-center">
+          <h2 class="mb-3">Mes informations</h2>
+          <div class="row">
+            <div class="col-md-6">
+              <label class="label">Prénom</label
+              ><input type="text" class="form-control" />
+            </div>
+            <div class="col-md-6">
+              <label class="label">Nom</label
+              ><input type="text" class="form-control" />
+            </div>
           </div>
-          
+          <div class="row">
+            <div class="col-md-12">
+              <label class="label">Email</label
+              ><input type="text" class="form-control" />
+            </div>
+            <div class="col-md-12">
+              <label class="label">Numéro de téléphone</label
+              ><input type="text" class="form-control" />
+            </div>
+            <div class="col-md-12">
+              <label class="label">Adresse</label
+              ><input type="text" class="form-control" />
+            </div>
+
+            <div class="col-md-12">
+              <label class="label">Code postal</label
+              ><input type="text" class="form-control" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label class="label">Ville</label
+              ><input type="text" class="form-control" />
+            </div>
+            <div class="col-md-6">
+              <label class="label">Pays</label
+              ><input type="text" class="form-control" />
+            </div>
+          </div>
+          <div class="mt-5 text-center">
+            <button class="btn btn-primary profile-button" type="button">
+              Sauvegarder mes informations
+            </button>
+          </div>
         </div>
       </div>
     </div>
+  </div>
 </div>
