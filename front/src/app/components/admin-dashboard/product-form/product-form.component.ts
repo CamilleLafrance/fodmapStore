@@ -42,6 +42,7 @@ export class ProductFormComponent {
         console.error(messageError);
       },
     });
+    
   }
 
   loadProducts(): void {

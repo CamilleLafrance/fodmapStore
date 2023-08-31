@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: "sign-up", component: SignUpComponent },
   { path: "products/:id", component: ProductPageComponent },
   { path: "products-add", component: ProductFormComponent },
-  { path: "products-modify", component: ProductModifyComponent },
+  { path: "products/:id/update", component: ProductModifyComponent },
   { path: "products-list-form", component: ProductsListFormComponent },
   { path: "admin-dashboard", component: AdminDashboardComponent },
   { path: "user-profile", component: UserComponent },

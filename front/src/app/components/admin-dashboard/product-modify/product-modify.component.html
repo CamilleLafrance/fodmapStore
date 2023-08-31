@@ -28,8 +28,7 @@
                   type="text"
                   class="form-control"
                   id="name"
-                  formControlName="name"
-                  [(ngModel)]="product.name"
+                  formControlName="name" 
                 />
               </div>
             </div>
@@ -103,14 +102,15 @@
                 >
                 <select
                   id="category"
-                  name="category"
+                  name="category" 
                   class="form-select"
-                  formControlName="category"
+                  formControlName="category" 
                 >
-                  <option value="" selected disabled>— — Choisir — —</option>
+                  <option>— — Choisir — —</option>
                   <option
                     *ngFor="let category of listCategories"
-                    [ngValue]="category"
+                    [value]="category"
+                    [selected]="category === productForm.value.category"
                   >
                     {{ category.name }}
                   </option>

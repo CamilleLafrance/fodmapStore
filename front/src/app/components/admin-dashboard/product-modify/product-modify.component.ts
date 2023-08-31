@@ -1,19 +1,20 @@
-import { Component, Input } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
-import { CategoryService } from 'src/app/services/category.service';
-import { ProductService } from 'src/app/services/product.service';
-import { Category } from 'src/model/product/category';
-import { Product } from 'src/model/product/product';
+import { Component, Input } from "@angular/core";
+import { FormGroup, FormBuilder, FormControl } from "@angular/forms";
+import { ActivatedRoute, Router } from "@angular/router";
+import { CategoryService } from "src/app/services/category.service";
+import { ProductService } from "src/app/services/product.service";
+import { Category } from "src/model/product/category";
+import { Product } from "src/model/product/product";
 
 @Component({
-  selector: 'app-product-modify',
-  templateUrl: './product-modify.component.html',
-  styleUrls: ['./product-modify.component.css']
+  selector: "app-product-modify",
+  templateUrl: "./product-modify.component.html",
+  styleUrls: ["./product-modify.component.css"],
 })
 export class ProductModifyComponent {
   @Input() product!: Product;
-  public productForm!: FormGroup;
+  productForm: FormGroup | any;
+  category: Category | undefined;
   listCategories: Array<Category> = [];
   listProducts: Array<Product> = [];
 
@@ -21,36 +22,22 @@ export class ProductModifyComponent {
     private productService: ProductService,
     private formBuilder: FormBuilder,
     private categoryService: CategoryService,
-    private router: Router, 
+    private router: Router,
     private route: ActivatedRoute
-  ) {}
-
-  ngOnInit(): void {
-    this.route.paramMap.subscribe(params => {
-      const id = parseInt(params.get('id') || '');
-      this.productService.getProductById(id).subscribe({
-        next : data => {
-          this.initForm(data);
-          this.product = data;
-        },
-        error : messageError => {
-          console.error(messageError);
-        }
-      });
-    })
-
+  ) {
+    
   }
 
-  initForm(product: any): void {
+  ngOnInit(): void {
     this.productForm = this.formBuilder.group({
-      barCode: product.barCode,
-      name: product.name,
-      description: product.description,
-      image: product.image,
-      price: product.price,
-      category: product.category,
-      stockQuantity: product.stockQuantity,
-      weight: product.weight,
+      barCode: this.formBuilder.control(""),
+      name: this.formBuilder.control(""),
+      description: this.formBuilder.control(""),
+      image: this.formBuilder.control(""),
+      category: this.formBuilder.control(""),
+      price: this.formBuilder.control(""),
+      stockQuantity: this.formBuilder.control(""),
+      weight: this.formBuilder.control(""),
     });
     this.categoryService.getAllCategories().subscribe({
       next: (data) => {
@@ -59,6 +46,21 @@ export class ProductModifyComponent {
       error: (messageError) => {
         console.error(messageError);
       },
+    });
+   
+    this.route.paramMap.subscribe((params) => {
+      const id = parseInt(params.get("id") || "", 10);
+      this.productService.getProductById(id).subscribe({
+        next: (product) => {
+          this.product = product;
+          this.category = product.category;
+          this.productForm.patchValue(product);
+          console.log(product);
+        },
+        error: (messageError) => {
+          console.error(messageError);
+        },
+      });
     });
   }
 
@@ -69,8 +71,7 @@ export class ProductModifyComponent {
   }
 
   updateProduct(): void {
-    let updatedProduct: Product = this.productForm.value;
-    updatedProduct.id = this.product.id;
+    let updatedProduct = { ...this.product, ...this.productForm.value };
     this.productService.updateProduct(updatedProduct).subscribe({
       next: (data) => {
         console.log(data);

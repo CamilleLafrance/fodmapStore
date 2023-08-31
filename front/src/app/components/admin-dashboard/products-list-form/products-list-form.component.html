@@ -17,7 +17,7 @@
                 <button
                   id="edit-product"
                   class="badge rounded-pill badge-notification bg-secondary-subtle"
-                  routerLink="/products-modify"
+                  [routerLink]="['/products', product.id, 'update']"
                 >
                   ✍︎
                 </button>
