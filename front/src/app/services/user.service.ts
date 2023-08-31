@@ -27,6 +27,13 @@ export class UserService {
   }
 
   // UPDATE
+  public updateUser(user: User): Observable<User> {
+    return this.http.put<User>(this.baseURL + "/users/update", user);
+  }
 
   // DELETE
+  public deleteUser(id: number): Observable<User>{
+    const url = `${this.baseURL}/users/${id}`;
+    return this.http.delete<User>(url);
+  }
 }
