@@ -24,9 +24,7 @@ export class ProductModifyComponent {
     private categoryService: CategoryService,
     private router: Router,
     private route: ActivatedRoute
-  ) {
-    
-  }
+  ) {}
 
   ngOnInit(): void {
     this.productForm = this.formBuilder.group({
@@ -47,7 +45,7 @@ export class ProductModifyComponent {
         console.error(messageError);
       },
     });
-   
+
     this.route.paramMap.subscribe((params) => {
       const id = parseInt(params.get("id") || "", 10);
       this.productService.getProductById(id).subscribe({

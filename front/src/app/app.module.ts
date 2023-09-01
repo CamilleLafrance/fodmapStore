@@ -27,6 +27,7 @@ import { ProductsListFormComponent } from './components/admin-dashboard/products
 import { SidebarUserComponent } from './components/user/sidebar-user/sidebar-user.component';
 import { UserDashboardComponent } from './components/user/user-dashboard/user-dashboard.component';
 import { ProductModifyComponent } from './components/admin-dashboard/product-modify/product-modify.component';
+import { UserManagerComponent } from './components/admin-dashboard/user-manager/user-manager.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { ProductModifyComponent } from './components/admin-dashboard/product-mod
     SidebarUserComponent,
     UserDashboardComponent,
     ProductModifyComponent,
+    UserManagerComponent,
   ],
   imports: [
     BrowserModule,

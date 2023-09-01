@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component } from "@angular/core";
 import { Router } from "@angular/router";
 import { AuthService } from "src/app/services/auth.service";
 
@@ -8,24 +8,18 @@ import { AuthService } from "src/app/services/auth.service";
   styleUrls: ["./navigation.component.css"],
 })
 export class NavigationComponent {
-  @Input() authStatus: boolean | undefined;
+  authStatus: boolean = false;
 
   constructor(private router: Router, private authService: AuthService) {}
 
   ngOnInit() {
-    this.authStatus = this.authService.isAuth;
+    this.authService.authStatus$.subscribe((status) => {
+      this.authStatus = status;
+    });
   }
 
-  onSignIn() {
-    this.authService.signIn().then(() => {
-      this.authStatus = this.authService.isAuth; 
-      this.router.navigate(["user-profile"]);
-    });
-  };
-
   onSignOut() {
-    this.authService.signOut();
-    this.authStatus = this.authService.isAuth;
-    this.router.navigate(['main-view']);
+    this.authService.setAuthStatus(false);
+    this.router.navigate(["main-view"]);
   }
 }
