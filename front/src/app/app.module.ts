@@ -21,13 +21,13 @@ import { ProductFormComponent } from "./components/admin-dashboard/product-form/
 import { AboutUsComponent } from "./components/about-us/about-us.component";
 import { UserFormComponent } from "./components/user/user-form/user-form.component";
 import { AdminDashboardComponent } from "./components/admin-dashboard/admin-dashboard.component";
-import { ProductManagerComponent } from './components/admin-dashboard/product-manager/product-manager.component';
-import { SidebarComponent } from './components/admin-dashboard/sidebar/sidebar.component';
-import { ProductsListFormComponent } from './components/admin-dashboard/products-list-form/products-list-form.component';
-import { SidebarUserComponent } from './components/user/sidebar-user/sidebar-user.component';
-import { UserDashboardComponent } from './components/user/user-dashboard/user-dashboard.component';
-import { ProductModifyComponent } from './components/admin-dashboard/product-modify/product-modify.component';
-import { UserManagerComponent } from './components/admin-dashboard/user-manager/user-manager.component';
+import { ProductManagerComponent } from "./components/admin-dashboard/product-manager/product-manager.component";
+import { SidebarComponent } from "./components/admin-dashboard/sidebar/sidebar.component";
+import { ProductsListFormComponent } from "./components/admin-dashboard/products-list-form/products-list-form.component";
+import { SidebarUserComponent } from "./components/user/sidebar-user/sidebar-user.component";
+import { UserDashboardComponent } from "./components/user/user-dashboard/user-dashboard.component";
+import { ProductModifyComponent } from "./components/admin-dashboard/product-modify/product-modify.component";
+import { UserManagerComponent } from "./components/admin-dashboard/user-manager/user-manager.component";
 
 @NgModule({
   declarations: [

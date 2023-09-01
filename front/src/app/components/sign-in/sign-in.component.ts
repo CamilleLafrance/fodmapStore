@@ -13,18 +13,25 @@ export class SignInComponent implements OnInit {
   authStatus: boolean = false;
 
   constructor(
-    private formBuilder: FormBuilder, 
-    private router: Router, private authService: AuthService
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private authService: AuthService
   ) {}
 
   ngOnInit() {
-    this.authService.authStatus$.subscribe(status => {
-      this.authStatus = status; 
+    this.authService.authStatus$.subscribe((status) => {
+      this.authStatus = status;
     });
     this.signInForm = this.formBuilder.group({
       email: ["", [Validators.required, Validators.email]],
-      password: ["", [Validators.required, Validators.minLength(6)]],
-    }); 
+      password: [
+        "",
+        [
+          Validators.required,
+          Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/),
+        ],
+      ],
+    });
   }
 
   onSignIn() {
