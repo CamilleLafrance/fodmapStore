@@ -1,3 +1,12 @@
 .container-fluid {
-    margin-top: 150px;
+  padding: 2rem;
+}
+
+.card {
+  padding: 1rem;
+}
+
+p {
+  margin: 1rem;
+  padding: 1rem;
 }

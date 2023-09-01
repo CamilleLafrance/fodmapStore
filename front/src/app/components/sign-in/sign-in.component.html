@@ -18,23 +18,28 @@
               </div>
               <!-- Password input -->
               <div class="form-group py-3">
-                <label for="password" class="form-label">Mot de passe <span class="tooltip-container ms-2">&#x24D8;</span></label>
+                <label for="password" class="form-label"
+                  >Mot de passe
+                  <span class="tooltip-container ms-2">&#x24D8;</span></label
+                >
                 <input
                   type="password"
                   class="form-control"
                   id="password"
                   formControlName="password"
-                /> 
+                />
               </div>
               <!-- Submit button -->
-              <button
-                class="btn btn-primary btn-block my-4"
-                type="submit"
-                [disabled]="signInForm.invalid"
-                (click)="onSignIn()"
-              >
-                Valider
-              </button>
+              <div class="button">
+                <button
+                  class="btn btn-primary btn-block my-4"
+                  type="submit"
+                  [disabled]="signInForm.invalid"
+                  (click)="onSignIn()"
+                >
+                  Valider
+                </button>
+              </div>
             </form>
           </div>
         </div>

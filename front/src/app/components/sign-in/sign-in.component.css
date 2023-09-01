@@ -30,3 +30,13 @@
 .tooltip-container:hover::before {
   opacity: 1;
 }
+
+.button {
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .button {
+    text-align: left;
+  }
+}

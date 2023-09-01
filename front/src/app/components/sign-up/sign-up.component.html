@@ -10,63 +10,68 @@
           />
         </div>
         <div class="col-lg-7">
-        <div class="card-body p-5">
-          <h2>Créer un compte</h2>
-          <form [formGroup]="signUpForm" (ngSubmit)="onSignUp()">
-            <!-- FirstName input -->
-            <div class="form-group py-3">
-              <label for="firstName" class="form-label">Prénom</label>
-              <input
-                type="text"
-                class="form-control"
-                id="firstName"
-                formControlName="firstName"
-              />
-            </div>
-            <!-- LastName input -->
-            <div class="form-group py-3">
-              <label for="lastName" class="form-label">Nom</label>
-              <input
-                type="text"
-                class="form-control"
-                id="lastName"
-                formControlName="lastName"
-              />
-            </div>
-            <!-- Email input -->
-            <div class="form-group py-3">
-              <label for="email" class="form-label">Email</label>
-              <input
-                type="text"
-                class="form-control"
-                id="email"
-                formControlName="email"
-              />
-            </div>
+          <div class="card-body p-5">
+            <h2>Créer un compte</h2>
+            <form [formGroup]="signUpForm" (ngSubmit)="onSignUp()">
+              <!-- FirstName input -->
+              <div class="form-group py-3">
+                <label for="firstName" class="form-label">Prénom</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  formControlName="firstName"
+                />
+              </div>
+              <!-- LastName input -->
+              <div class="form-group py-3">
+                <label for="lastName" class="form-label">Nom</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  formControlName="lastName"
+                />
+              </div>
+              <!-- Email input -->
+              <div class="form-group py-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  formControlName="email"
+                />
+              </div>
 
-            <!-- Password input -->
-            <div class="form-group py-3">
-              <label for="password" class="form-label">Mot de passe <span class="tooltip-container ms-2">&#x24D8;</span></label>
-              <input
-                type="password"
-                class="form-control"
-                id="password"
-                formControlName="password"
-              />
-            </div>
+              <!-- Password input -->
+              <div class="form-group py-3">
+                <label for="password" class="form-label"
+                  >Mot de passe
+                  <span class="tooltip-container ms-2">&#x24D8;</span></label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  formControlName="password"
+                />
+              </div>
 
-            <!-- Submit button -->
-            <button
-              class="btn btn-primary my-4" 
-              type="submit"
-              [disabled]="signUpForm.invalid"
-              (click)="onSignUp()"
-            >
-              Valider
-            </button>
-          </form>
+              <!-- Submit button -->
+              <div class="button">
+                <button
+                  class="btn btn-primary my-4"
+                  type="submit"
+                  [disabled]="signUpForm.invalid"
+                  (click)="onSignUp()"
+                >
+                  Valider
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
       </div>
     </div>
   </div>
