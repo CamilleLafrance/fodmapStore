@@ -26,7 +26,13 @@ export class SignUpComponent implements OnInit {
       firstName: this.formBuilder.control(""),
       lastName: this.formBuilder.control(""),
       email: ["", [Validators.required, Validators.email]],
-      password: ["", [Validators.required, Validators.minLength(6)]],
+      password: [
+        "",
+        [
+          Validators.required,
+          Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/),
+        ],
+      ],
     });
   }
 
