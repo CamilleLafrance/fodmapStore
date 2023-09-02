@@ -11,15 +11,10 @@
             <div *ngFor="let user of listUsers">
               <div class="box mb-3 mx-2 bg-light">
                 <div class="mt-2">
-                  <div class="tag">{{ user.firstName }} {{ user.lastName }}</div>
-                 
+                  <div class="tag">
+                    {{ user.firstName }} {{ user.lastName }}
+                  </div>
                 </div>
-                <button
-                  id="edit-user"
-                  class="badge rounded-pill badge-notification bg-secondary-subtle"
-                >
-                  ✍︎
-                </button>
                 <button
                   id="delete-user"
                   class="badge rounded-pill badge-notification bg-danger-subtle"

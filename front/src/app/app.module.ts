@@ -35,6 +35,7 @@ import { CategoryManagerComponent } from './components/admin-dashboard/category-
 import { CategoriesListFormComponent } from './components/admin-dashboard/category-admin/categories-list-form/categories-list-form.component';
 import { CategoryFormComponent } from './components/admin-dashboard/category-admin/category-form/category-form.component';
 import { CategoryModifyComponent } from './components/admin-dashboard/category-admin/category-modify/category-modify.component';
+import { UnderConstructionComponent } from './components/under-construction/under-construction.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,7 @@ import { CategoryModifyComponent } from './components/admin-dashboard/category-a
     CategoriesListFormComponent,
     CategoryFormComponent,
     CategoryModifyComponent,
+    UnderConstructionComponent,
   ],
   imports: [
     BrowserModule,

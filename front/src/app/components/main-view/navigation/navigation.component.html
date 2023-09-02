@@ -46,16 +46,19 @@
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
-            href="#"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
             >Boutique</a
           >
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#!">Tous les produits</a></li>
+            <li>
+              <a class="dropdown-item" routerLink="main-view"
+                >Tous les produits</a
+              >
+            </li>
             <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="#!">Nouveautés</a></li>
+            <li><a class="dropdown-item" routerLink="soon">Nouveautés</a></li>
           </ul>
         </li>
       </ul>
@@ -66,6 +69,7 @@
           class="btn btn-outline-light"
           type="submit"
           style="width: fit-content"
+          routerLink="soon"
         >
           Panier
           <span class="badge rounded-pill badge-notification bg-danger">0</span>

@@ -25,16 +25,10 @@ button {
   border: none;
 }
 
-#edit-user {
-  position: relative;
-  top: 0rem;
-  left: 7.5rem;
-}
-
 #delete-user {
   position: relative;
-  top: 0rem; 
-  left: 7.8rem;
+  top: -0.3rem; 
+  left: 8.8rem;
 }
 
 .badge img {

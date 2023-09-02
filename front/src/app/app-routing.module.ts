@@ -18,6 +18,7 @@ import { CategoryManagerComponent } from "./components/admin-dashboard/category-
 import { CategoryFormComponent } from "./components/admin-dashboard/category-admin/category-form/category-form.component";
 import { CategoryModifyComponent } from "./components/admin-dashboard/category-admin/category-modify/category-modify.component";
 import { CategoriesListFormComponent } from "./components/admin-dashboard/category-admin/categories-list-form/categories-list-form.component";
+import { UnderConstructionComponent } from "./components/under-construction/under-construction.component";
 
 const routes: Routes = [
   { path: "", component: MainViewComponent },
@@ -38,6 +39,7 @@ const routes: Routes = [
   { path: "admin-dashboard", component: AdminDashboardComponent },
   { path: "user-profile", component: UserComponent },
   { path: "user/:id/update", component: UserFormComponent },
+  { path: "soon", component: UnderConstructionComponent },
   { path: "not-found", component: FourOhFourComponent },
   { path: "**", redirectTo: "/not-found" },
 ];
