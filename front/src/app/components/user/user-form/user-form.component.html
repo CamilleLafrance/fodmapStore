@@ -1,7 +1,55 @@
 <div class="container mt-5">
   <div class="row g-2">
     <div class="col-lg-3 my-lg-0 my-md-2">
-      <app-sidebar-user></app-sidebar-user>
+      <div id="sidebar">
+        <h4 class="ps-4">Mon compte</h4>
+        <ul class="m-0 ps-1">
+          <li>
+            <a class="text-decoration-none d-flex align-items-start" routerLink="/user-profile">
+              <div class="d-flex flex-column">
+                <div class="link">Mon compte</div>
+                <div class="link-desc">Gérer mon compte</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="text-decoration-none d-flex align-items-start">
+              <div class="d-flex flex-column">
+                <div class="link">Mes commandes</div>
+                <div class="link-desc">Gérer mes commandes/retours</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="text-decoration-none d-flex align-items-start">
+              <div class="d-flex flex-column">
+                <div class="link">Mes adresses</div>
+                <div class="link-desc">Gérer mes adresses</div>
+              </div>
+            </a>
+          </li>
+          <li class="active">
+            <a
+              class="text-decoration-none d-flex align-items-start"
+              routerLink="/user/1/update"
+            >
+              <div class="d-flex flex-column">
+                <div class="link">Mon profil</div>
+                <div class="link-desc">Changer les infos de mon profil</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="text-decoration-none d-flex align-items-start">
+              <div class="d-flex flex-column">
+                <div class="link">Aide & Support</div>
+                <div class="link-desc">Contacter le support</div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
     </div>
     <div class="col-lg-9 my-lg-0 my-md-2 mb-5">
       <div id="main-content" class="bg-white border p-5">

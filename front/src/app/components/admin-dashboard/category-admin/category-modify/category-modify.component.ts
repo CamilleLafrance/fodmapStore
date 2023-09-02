@@ -12,7 +12,7 @@ import { Category } from 'src/model/product/category';
 export class CategoryModifyComponent {
   
   categoryForm: FormGroup | any;
-  category: Category | undefined;
+  category!: Category;
   listCategories: Array<Category> = [];
 
   constructor(
