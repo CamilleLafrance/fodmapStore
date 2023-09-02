@@ -1,0 +1,26 @@
+#main-content { 
+    border-radius: 15px;
+    min-height: 400px;
+}
+
+#main-content .text-uppercase {
+    font-weight: 600; 
+}
+
+#main-content .box {
+    padding: 10px;
+    border-radius: 6px;
+    min-width: 217px;
+    min-height: 120px;
+}
+
+#main-content .box img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+#main-content .box .tag {
+    color: black;
+    font-weight: 500;
+}

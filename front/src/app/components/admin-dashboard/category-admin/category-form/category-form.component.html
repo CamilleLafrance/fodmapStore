@@ -1,0 +1,60 @@
+<div class="container mt-5">
+  <div class="row g-2">
+    <div class="col-lg-3 my-lg-0 my-md-2">
+      <app-sidebar-category-admin></app-sidebar-category-admin>
+    </div>
+    <div class="col-lg-9 my-lg-0 my-md-2 mb-5">
+      <div class="bg-white border p-5">
+        <div class="d-flex flex-column justify-content-center">
+          <div
+            class="d-flex flex-wrap justify-content-between align-items-center"
+          >
+            <h2 class="mb-3">Ajouter une catégorie</h2>
+            <div class="box">
+              <img src="../../../../../assets/cream.png" alt="" />
+            </div>
+          </div>
+          <form [formGroup]="categoryForm" (ngSubmit)="addCategory()">
+            <div class="row">
+              <!-- Name input -->
+              <div class="form-group py-3 col-md-12">
+                <label for="name" class="form-label">Nom</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  formControlName="name"
+                />
+              </div>
+            </div>
+
+            <div class="row">
+              <!-- Description input -->
+              <div class="form-group py-3 col-md-12">
+                <label for="description" class="form-label">Description</label>
+                <textarea
+                  type="text"
+                  class="form-control"
+                  id="description"
+                  formControlName="description"
+                ></textarea>
+              </div>
+            </div>
+
+            <!-- Submit button -->
+            <div class="mt-5 text-center">
+              <button
+                class="btn btn-primary product-button"
+                type="submit"
+                [disabled]="categoryForm.invalid"
+                (ngSubmit)="addCategory()"
+              >
+                Valider
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

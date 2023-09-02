@@ -13,7 +13,7 @@ export class CategoryService {
 
   // CREATE
   public addCategory(category: Category): Observable<Category> {
-    return this.http.post<Category>(this.baseURL + "/categories", category);
+    return this.http.post<Category>(this.baseURL + "/categories/add", category);
   }
 
   // READ

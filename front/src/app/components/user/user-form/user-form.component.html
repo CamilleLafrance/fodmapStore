@@ -1,60 +1,7 @@
 <div class="container mt-5">
   <div class="row g-2">
     <div class="col-lg-3 my-lg-0 my-md-2">
-      <div id="sidebar">
-        <h4 class="ps-4">Mon compte</h4>
-        <ul class="m-0 ps-1">
-          <li>
-            <a
-              class="text-decoration-none d-flex align-items-start"
-              routerLink="/user-profile"
-            >
-              <div class="d-flex flex-column">
-                <div class="link">Mon compte</div>
-                <div class="link-desc">Gérer mon compte</div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a
-              class="text-decoration-none d-flex align-items-start"
-              routerLink="orders"
-            >
-              <div class="d-flex flex-column">
-                <div class="link">Mes commandes</div>
-                <div class="link-desc">Gérer mes commandes/retours</div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="text-decoration-none d-flex align-items-start">
-              <div class="d-flex flex-column">
-                <div class="link">Mes adresses</div>
-                <div class="link-desc">Gérer mes adresses</div>
-              </div>
-            </a>
-          </li>
-          <li class="active">
-            <a
-              class="text-decoration-none d-flex align-items-start"
-              routerLink="/user/1/update"
-            >
-              <div class="d-flex flex-column">
-                <div class="link">Mon profil</div>
-                <div class="link-desc">Changer les infos de mon profil</div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="text-decoration-none d-flex align-items-start">
-              <div class="d-flex flex-column">
-                <div class="link">Aide & Support</div>
-                <div class="link-desc">Contacter le support</div>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
+      <app-sidebar-user></app-sidebar-user>
     </div>
     <div class="col-lg-9 my-lg-0 my-md-2 mb-5">
       <div id="main-content" class="bg-white border p-5">
@@ -63,16 +10,18 @@
           <form [formGroup]="userForm" (ngSubmit)="updateUser()">
             <div class="row">
               <div class="form-group col-md-6">
-                <label class="label">Prénom</label
+                <label for="firstName" class="label">Prénom</label
                 ><input
+                  id="firstName"
                   type="text"
                   class="form-control"
                   formControlName="firstName"
                 />
               </div>
               <div class="form-group col-md-6">
-                <label class="label">Nom</label
+                <label for="lastName" class="label">Nom</label
                 ><input
+                  id="lastName"
                   type="text"
                   class="form-control"
                   formControlName="lastName"
@@ -81,16 +30,18 @@
             </div>
             <div class="row">
               <div class="form-group col-md-6">
-                <label class="label">Email</label
+                <label for="email" class="label">Email</label
                 ><input
+                  id="email"
                   type="text"
                   class="form-control"
                   formControlName="email"
                 />
               </div>
               <div class="form-group col-md-6">
-                <label class="label">Mot de passe</label
+                <label for="password" class="label">Mot de passe</label
                 ><input
+                  id="password"
                   type="password"
                   class="form-control"
                   formControlName="passwordHash"
@@ -99,16 +50,19 @@
             </div>
             <div class="row">
               <div class="form-group col-md-6">
-                <label class="label">Date de naissance</label
+                <label for="dateOfBirth" class="label">Date de naissance</label
                 ><input
+                  id="dateOfBirth"
                   type="text"
                   class="form-control"
                   formControlName="dateOfBirth"
                 />
               </div>
               <div class="form-group col-md-6">
-                <label class="label">Numéro de téléphone</label
+                <label for="phoneNumber" class="label"
+                  >Numéro de téléphone</label
                 ><input
+                  id="phoneNumber"
                   type="text"
                   class="form-control"
                   formControlName="phoneNumber"
@@ -117,8 +71,9 @@
             </div>
             <div class="row">
               <div class="form-group col-md-6">
-                <label class="label">Adresse</label
+                <label for="address" class="label">Adresse</label
                 ><input
+                  id="address"
                   type="text"
                   class="form-control"
                   formControlName="address"
@@ -126,8 +81,9 @@
               </div>
 
               <div class="form-group col-md-6">
-                <label class="label">Code postal</label
+                <label for="postalCode" class="label">Code postal</label
                 ><input
+                  id="postalCode"
                   type="text"
                   class="form-control"
                   formControlName="postalCode"
@@ -136,16 +92,18 @@
             </div>
             <div class="row">
               <div class="form-group col-md-6">
-                <label class="label">Ville</label
+                <label for="city" class="label">Ville</label
                 ><input
+                  id="city"
                   type="text"
                   class="form-control"
                   formControlName="city"
                 />
               </div>
               <div class="form-group col-md-6">
-                <label class="label">Pays</label
+                <label for="country" class="label">Pays</label
                 ><input
+                  id="country"
                   type="text"
                   class="form-control"
                   formControlName="country"

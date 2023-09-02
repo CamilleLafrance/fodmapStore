@@ -1,0 +1,39 @@
+<div class="container mt-5">
+    <div class="row g-2">
+      <div class="col-lg-3 my-lg-0 my-md-2">
+        <app-sidebar-category-admin></app-sidebar-category-admin>
+      </div>
+      <div class="col-lg-9 my-lg-0 my-md-2">
+        <div class="col">
+          <div id="main-content" class="bg-white border py-5 px-3 mx-auto">
+            <h2>Liste des catégories</h2>
+            <div class="d-flex my-4 flex-wrap justify-content-center">
+              <div *ngFor="let category of listCategories">
+                <div class="box mb-3 mx-2 bg-light text-center">
+                  <div class="mt-2" style="height: 50px">
+                    <a class="tag" [routerLink]="['/categories', category.id, 'update']">{{ category.name }}</a>
+                   
+                  </div>
+                  <!-- <button
+                    id="edit-category"
+                    class="badge rounded-pill badge-notification bg-secondary-subtle"
+                    [routerLink]="['/categories', category.id, 'update']"
+                  >
+                    ✍︎
+                  </button> -->
+                  <button
+                    id="delete-category"
+                    class="badge rounded-pill badge-notification bg-danger-subtle"
+                    (click)="deleteCategory(category.id)"
+                  >
+                    ✖︎
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

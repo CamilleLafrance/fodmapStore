@@ -1,0 +1,47 @@
+.bg-white {
+    border-radius: 15px;
+  }
+  
+  .form-control:focus {
+    box-shadow: none;
+    border-color: black;
+  }
+  
+  .category-button {
+    background: #e40f0f;
+    box-shadow: none;
+    border: none;
+  }
+  
+  .category-button:hover {
+    background: black;
+  }
+  
+  .category-button:focus {
+    background: black;
+    box-shadow: none;
+  }
+  
+  .category-button:active {
+    background: black;
+    box-shadow: none;
+  }
+  
+  label {
+    font-size: 0.8rem;
+    margin-top: 15px;
+  }
+  
+  @media (max-width: 768px) {
+    h2 {
+      text-align: center;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    h2 {
+      text-align: left;
+      margin-left: 20px;
+    }
+  }
+  

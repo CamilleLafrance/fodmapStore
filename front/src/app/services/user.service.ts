@@ -13,7 +13,7 @@ export class UserService {
 
   // CREATE
   public addUser(user : User): Observable<User>{
-    return this.http.post<User>(this.baseURL + "/users", user);
+    return this.http.post<User>(this.baseURL + "/users/add", user);
   }
 
   // READ
