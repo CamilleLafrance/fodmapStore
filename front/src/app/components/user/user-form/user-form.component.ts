@@ -16,7 +16,8 @@ export class UserFormComponent {
   constructor(
     private userService: UserService,
     private formBuilder: FormBuilder, 
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
@@ -31,6 +32,20 @@ export class UserFormComponent {
       postalCode: this.formBuilder.control(""),
       city: this.formBuilder.control(""),
       country: this.formBuilder.control(""), 
+    });
+
+    this.route.paramMap.subscribe((params) => {
+      const id = parseInt(params.get("id") || "", 10);
+      this.userService.getUserById(id).subscribe({
+        next: (user) => {
+          this.user = user; 
+          this.userForm.patchValue(user);
+          console.log(user);
+        },
+        error: (messageError) => {
+          console.error(messageError);
+        },
+      });
     });
   }
 
@@ -49,4 +64,5 @@ export class UserFormComponent {
       },
     });
   }
+
 }

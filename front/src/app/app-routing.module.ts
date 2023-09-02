@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: "products-list-form", component: ProductsListFormComponent },
   { path: "admin-dashboard", component: AdminDashboardComponent },
   { path: "user-profile", component: UserComponent },
-  { path: "user-form", component: UserFormComponent },
+  { path: "user/:id/update", component: UserFormComponent },
   { path: "not-found", component: FourOhFourComponent },
   { path: "**", redirectTo: "/not-found" },
 ];

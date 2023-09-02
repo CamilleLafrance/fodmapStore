@@ -37,7 +37,7 @@
           <li class="active">
             <a
               class="text-decoration-none d-flex align-items-start"
-              routerLink="/user-form"
+              routerLink="/user/1/update"
             >
               <div class="d-flex flex-column">
                 <div class="link">Mon profil</div>
@@ -60,50 +60,109 @@
       <div id="main-content" class="bg-white border p-5">
         <div class="d-flex flex-column justify-content-center">
           <h2 class="mb-3">Mes informations</h2>
-          <div class="row">
-            <div class="col-md-6">
-              <label class="label">Prénom</label
-              ><input type="text" class="form-control" />
+          <form [formGroup]="userForm" (ngSubmit)="updateUser()">
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label class="label">Prénom</label
+                ><input
+                  type="text"
+                  class="form-control"
+                  formControlName="firstName"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label class="label">Nom</label
+                ><input
+                  type="text"
+                  class="form-control"
+                  formControlName="lastName"
+                />
+              </div>
             </div>
-            <div class="col-md-6">
-              <label class="label">Nom</label
-              ><input type="text" class="form-control" />
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label class="label">Email</label
+                ><input
+                  type="text"
+                  class="form-control"
+                  formControlName="email"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label class="label">Mot de passe</label
+                ><input
+                  type="password"
+                  class="form-control"
+                  formControlName="passwordHash"
+                />
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <label class="label">Email</label
-              ><input type="text" class="form-control" />
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label class="label">Date de naissance</label
+                ><input
+                  type="text"
+                  class="form-control"
+                  formControlName="dateOfBirth"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label class="label">Numéro de téléphone</label
+                ><input
+                  type="text"
+                  class="form-control"
+                  formControlName="phoneNumber"
+                />
+              </div>
             </div>
-            <div class="col-md-12">
-              <label class="label">Numéro de téléphone</label
-              ><input type="text" class="form-control" />
-            </div>
-            <div class="col-md-12">
-              <label class="label">Adresse</label
-              ><input type="text" class="form-control" />
-            </div>
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label class="label">Adresse</label
+                ><input
+                  type="text"
+                  class="form-control"
+                  formControlName="address"
+                />
+              </div>
 
-            <div class="col-md-12">
-              <label class="label">Code postal</label
-              ><input type="text" class="form-control" />
+              <div class="form-group col-md-6">
+                <label class="label">Code postal</label
+                ><input
+                  type="text"
+                  class="form-control"
+                  formControlName="postalCode"
+                />
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <label class="label">Ville</label
-              ><input type="text" class="form-control" />
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label class="label">Ville</label
+                ><input
+                  type="text"
+                  class="form-control"
+                  formControlName="city"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label class="label">Pays</label
+                ><input
+                  type="text"
+                  class="form-control"
+                  formControlName="country"
+                />
+              </div>
             </div>
-            <div class="col-md-6">
-              <label class="label">Pays</label
-              ><input type="text" class="form-control" />
+            <div class="mt-5 text-center">
+              <button
+                class="btn btn-primary profile-button"
+                type="submit"
+                [disabled]="userForm.invalid"
+                (ngSubmit)="updateUser()"
+              >
+                Sauvegarder mes informations
+              </button>
             </div>
-          </div>
-          <div class="mt-5 text-center">
-            <button class="btn btn-primary profile-button" type="button">
-              Sauvegarder mes informations
-            </button>
-          </div>
+          </form>
         </div>
       </div>
     </div>
