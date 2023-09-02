@@ -29,6 +29,7 @@ import { UserDashboardComponent } from "./components/user/user-dashboard/user-da
 import { ProductModifyComponent } from "./components/admin-dashboard/product-modify/product-modify.component";
 import { UserManagerComponent } from "./components/admin-dashboard/user-manager/user-manager.component";
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +62,7 @@ import { UserManagerComponent } from "./components/admin-dashboard/user-manager/
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule 
   ],
   providers: [AuthService],
   bootstrap: [AppComponent],

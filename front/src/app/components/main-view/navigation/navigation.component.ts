@@ -1,5 +1,5 @@
-import { Component } from "@angular/core";
-import { Router } from "@angular/router";
+import { Component, ElementRef, Renderer2 } from "@angular/core";
+import { NavigationEnd, Router } from "@angular/router";
 import { AuthService } from "src/app/services/auth.service";
 
 @Component({
@@ -9,6 +9,7 @@ import { AuthService } from "src/app/services/auth.service";
 })
 export class NavigationComponent {
   authStatus: boolean = false;
+  isNavbarCollapsed: boolean = true;
 
   constructor(private router: Router, private authService: AuthService) {}
 
@@ -16,6 +17,21 @@ export class NavigationComponent {
     this.authService.authStatus$.subscribe((status) => {
       this.authStatus = status;
     });
+    this.isNavbarCollapsed = true;
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.collapseNavbar();
+      }
+    });
+  }
+
+  collapseNavbar() {
+    const navbarToggler = document.querySelector("#navbarToggler");
+    if (navbarToggler instanceof HTMLElement) {
+      if (!navbarToggler.classList.contains("collapsed")) {
+        navbarToggler.click();
+      }
+    }
   }
 
   onSignOut() {

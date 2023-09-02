@@ -13,7 +13,8 @@
     /></a>
     <!-- Toggle button -->
     <button
-      class="navbar-toggler"
+      id="navbarToggler"
+      class="navbar-toggler {{ isNavbarCollapsed ? 'collapsed' : '' }}"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#navbarMenu"
@@ -85,7 +86,7 @@
             S'inscrire
           </button>
         </div>
-        <div *ngIf="authStatus" class="d-flex gap-3" >
+        <div *ngIf="authStatus" class="d-flex gap-3">
           <div class="nav-item dropdown">
             <a
               class="dropdown"
