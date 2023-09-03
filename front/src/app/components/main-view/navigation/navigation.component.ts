@@ -1,6 +1,7 @@
-import { Component, ElementRef, Renderer2 } from "@angular/core";
+import { Component } from "@angular/core";
 import { NavigationEnd, Router } from "@angular/router";
 import { AuthService } from "src/app/services/auth.service";
+import { ShoppingCartCommunicationService } from "src/app/services/shopping-cart-communication.service";
 
 @Component({
   selector: "app-navigation",
@@ -10,12 +11,20 @@ import { AuthService } from "src/app/services/auth.service";
 export class NavigationComponent {
   authStatus: boolean = false;
   isNavbarCollapsed: boolean = true;
+  productsCount: number = 0;
 
-  constructor(private router: Router, private authService: AuthService) {}
+  constructor(
+    private router: Router,
+    private authService: AuthService,
+    private shoppingCartService: ShoppingCartCommunicationService
+  ) {}
 
   ngOnInit() {
     this.authService.authStatus$.subscribe((status) => {
       this.authStatus = status;
+    });
+    this.shoppingCartService.productsCount$.subscribe((count) => {
+      this.productsCount = count;
     });
     this.isNavbarCollapsed = true;
     this.router.events.subscribe((event) => {

@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { ShoppingCartCommunicationService } from "src/app/services/shopping-cart-communication.service";
 import { Product } from "src/model/product/product";
 
 @Component({
@@ -7,11 +8,16 @@ import { Product } from "src/model/product/product";
   styleUrls: ["./product.component.css"],
 })
 export class ProductComponent {
+  productsCount!: number;
   
   @Input() product!: Product;  
   
-  constructor() {}
+  constructor(private shoppingCartService: ShoppingCartCommunicationService) {}
 
   ngOnInit(): void {
+  }
+
+  addToShoppingCart() { 
+    this.shoppingCartService.incrementProductsCount();
   }
 }
