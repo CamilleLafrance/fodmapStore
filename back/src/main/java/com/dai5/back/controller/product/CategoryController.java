@@ -34,7 +34,6 @@ public class CategoryController {
         return this.categoryService.getById(idCategory);
     }
 
-    // -- NOT TESTED --
     // PUT
     @PutMapping("/categories/update")
     public Category updateCategory(@RequestBody Category updatedCategory){

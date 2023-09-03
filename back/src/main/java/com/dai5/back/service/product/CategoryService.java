@@ -30,7 +30,6 @@ public class CategoryService {
         return this.categoryRepository.findById(id).orElse(null);
     }
 
-    // -- NOT TESTED --
     // UPDATE
     public Category update(Category updatedCategory) {
 

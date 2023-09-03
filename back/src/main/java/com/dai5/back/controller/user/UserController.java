@@ -33,7 +33,6 @@ public class UserController {
         return this.userService.getById(idUser);
     }
 
-    // -- NOT TESTED --
     // PUT
     @PutMapping("/users/update")
     public User updateUser(@RequestBody User updatedUser){
