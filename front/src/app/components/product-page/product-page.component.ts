@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router"; 
 import { ProductService } from "src/app/services/product.service";
+import { ShoppingCartCommunicationService } from "src/app/services/shopping-cart-communication.service";
 import { Category } from "src/model/product/category";
 import { Product } from "src/model/product/product";
 
@@ -13,8 +14,9 @@ export class ProductPageComponent implements OnInit {
  
   @Input() product!: Product; 
   category: Category | undefined;
+  productsCount!: number;
   
-  constructor(private productService: ProductService, private route: ActivatedRoute) {}
+  constructor(private productService: ProductService, private route: ActivatedRoute, private shoppingCartService: ShoppingCartCommunicationService) {}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -31,4 +33,8 @@ export class ProductPageComponent implements OnInit {
     }) 
     ;
   } 
+
+  addToShoppingCart() { 
+    this.shoppingCartService.incrementProductsCount();
+  }
 }
