@@ -30,12 +30,16 @@ import { ProductModifyComponent } from "./components/admin-dashboard/product-adm
 import { UserManagerComponent } from "./components/admin-dashboard/user-admin/user-manager/user-manager.component";
 import { SidebarUserAdminComponent } from "./components/admin-dashboard/user-admin/sidebar-user-admin/sidebar-user-admin.component";
 import { UsersListFormComponent } from "./components/admin-dashboard/user-admin/users-list-form/users-list-form.component";
-import { SidebarCategoryAdminComponent } from './components/admin-dashboard/category-admin/sidebar-category-admin/sidebar-category-admin.component';
-import { CategoryManagerComponent } from './components/admin-dashboard/category-admin/category-manager/category-manager.component';
-import { CategoriesListFormComponent } from './components/admin-dashboard/category-admin/categories-list-form/categories-list-form.component';
-import { CategoryFormComponent } from './components/admin-dashboard/category-admin/category-form/category-form.component';
-import { CategoryModifyComponent } from './components/admin-dashboard/category-admin/category-modify/category-modify.component';
-import { UnderConstructionComponent } from './components/under-construction/under-construction.component';
+import { SidebarCategoryAdminComponent } from "./components/admin-dashboard/category-admin/sidebar-category-admin/sidebar-category-admin.component";
+import { CategoryManagerComponent } from "./components/admin-dashboard/category-admin/category-manager/category-manager.component";
+import { CategoriesListFormComponent } from "./components/admin-dashboard/category-admin/categories-list-form/categories-list-form.component";
+import { CategoryFormComponent } from "./components/admin-dashboard/category-admin/category-form/category-form.component";
+import { CategoryModifyComponent } from "./components/admin-dashboard/category-admin/category-modify/category-modify.component";
+import { UnderConstructionComponent } from "./components/under-construction/under-construction.component";
+import { ShoppingCartComponent } from "./components/shopping-cart/shopping-cart.component";
+import { PaymentComponent } from "./components/shopping-cart/payment/payment.component";
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { ConfirmPaymentComponent } from './components/shopping-cart/confirm-payment/confirm-payment.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +75,9 @@ import { UnderConstructionComponent } from './components/under-construction/unde
     CategoryFormComponent,
     CategoryModifyComponent,
     UnderConstructionComponent,
+    ShoppingCartComponent,
+    PaymentComponent,
+    ConfirmPaymentComponent,
   ],
   imports: [
     BrowserModule,
@@ -78,6 +85,7 @@ import { UnderConstructionComponent } from './components/under-construction/unde
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    FontAwesomeModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent],

@@ -1,0 +1,113 @@
+<div class="card text-white rounded-3" style="background-color: #607d8b">
+  <div class="card-body">
+    <h5>Paiement</h5>
+    <p class="small mb-2">Choisir un moyen de paiement</p>
+    <div class="d-flex align-items-center">
+      <img
+        src="../../../../assets/credit-card-solid.svg"
+        alt="credit-card"
+        style="height: 2rem"
+        class="mx-1"
+      />
+      <img
+        src="../../../../assets/cc-visa.svg"
+        alt="visa"
+        style="height: 2rem"
+        class="mx-1"
+      />
+      <img
+        src="../../../../assets/cc-mastercard.svg"
+        alt="mastercard"
+        style="height: 2rem"
+        class="mx-1"
+      />
+      <img
+        src="../../../../assets/cc-amex.svg"
+        alt="amex"
+        style="height: 2rem"
+        class="mx-1"
+      />
+      <img
+        src="../../../../assets/cc-paypal.svg"
+        alt="paypal"
+        style="height: 2rem"
+        class="mx-1"
+      />
+    </div>
+
+    <form class="mt-4">
+      <div class="form-outline form-white mb-4">
+        <label class="form-label" for="cardName">Nom sur la carte</label>
+        <input
+          type="text"
+          id="cardName"
+          class="form-control"
+          placeholder="Nom sur la carte"
+        />
+      </div>
+
+      <div class="form-outline form-white mb-4">
+        <label class="form-label" for="cardNumber">Numéro de carte</label>
+        <input
+          type="text"
+          id="cardNumber"
+          class="form-control"
+          placeholder="Numéro de carte"
+          minlength="19"
+          maxlength="19"
+        />
+      </div>
+
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <div class="form-outline form-white">
+            <label class="form-label" for="exp">Expire le</label>
+            <input
+              type="text"
+              id="exp"
+              class="form-control"
+              placeholder="MM/YYYY"
+              id="exp"
+              minlength="7"
+              maxlength="7"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-outline form-white">
+            <label class="form-label" for="cvv">CVV</label>
+            <input
+              type="password"
+              id="cvv"
+              class="form-control"
+              placeholder="&#9679;&#9679;&#9679;"
+              minlength="3"
+              maxlength="3"
+            />
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <hr class="my-4" />
+    <div class="d-flex justify-content-between">
+        <p class="mb-2">Sous-total</p>
+        <p class="mb-2">13.21 €</p>
+      </div>
+
+    <div class="d-flex justify-content-between">
+        <p class="mb-2">Frais de port</p>
+        <p class="mb-2">3.90 €</p>
+      </div>
+
+    <div class="d-flex justify-content-between mb-4">
+      <p class="mb-2">Total</p>
+      <p class="mb-2">17.11 €</p>
+    </div>
+    <div class="text-center">
+      <button class="btn btn-primary payment-button py-2" type="button" routerLink="/confirm-payment">
+        Payer
+      </button>
+    </div>
+  </div>
+</div>

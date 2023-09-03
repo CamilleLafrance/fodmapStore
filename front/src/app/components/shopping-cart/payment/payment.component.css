@@ -1,0 +1,19 @@
+.payment-button {
+  background: rgb(27, 21, 140);
+  box-shadow: none;
+  border: none;
+}
+
+.payment-button:hover {
+  background: black;
+}
+
+.payment-button:focus {
+  background: black;
+  box-shadow: none;
+}
+
+.payment-button:active {
+  background: black;
+  box-shadow: none;
+}

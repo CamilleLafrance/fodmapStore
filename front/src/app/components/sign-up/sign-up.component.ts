@@ -45,7 +45,7 @@ export class SignUpComponent implements OnInit {
       next: (data) => {
         console.log(data);
         alert("Compte créé avec succès !");
-        this.router.navigate(["user-profile"]);
+        this.router.navigate(["main-view"]);
       },
       error: (err) => {
         console.error(err); 
