@@ -1,9 +1,9 @@
 # Low Fodmap E-commerce Website for IBS
  
-During my 4-month web development training at Philiance, I had the opportunity to conceptualize and create on my own an e-commerce website dedicated to offering low Fodmap products specifically designed for individuals suffering from Irritable Bowel Syndrome (IBS).  
+During my 4-month web development training at Philiance, I had the opportunity to conceptualize and create on my own an e-commerce website dedicated to offering Low Fodmap products specifically designed for individuals suffering from Irritable Bowel Syndrome (IBS).  
 
 # Background
-Irritable Bowel Syndrome (IBS) is a common gastrointestinal disorder that affects millions of people worldwide. Managing IBS often involves dietary modifications, and the low FODMAP diet has gained prominence as an effective way to alleviate symptoms. However, finding suitable low FODMAP products can be challenging for those with IBS.
+Irritable Bowel Syndrome (IBS) is a common gastrointestinal disorder that affects millions of people worldwide. Managing IBS often involves dietary modifications, and the Low Fodmap diet has gained prominence as an effective way to alleviate symptoms. However, finding suitable Low Fodmap products can be challenging for those with IBS.
 
 # Screenshots selection
 - <img width="478" alt="Boutique" src="https://github.com/CamilleLafrance/fodmapStore/assets/77630883/e4bf7140-a8fc-4639-b3ef-9a9b38e5902f">
