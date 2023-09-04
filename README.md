@@ -1,27 +1,17 @@
-# FodmapStore
+# Low Fodmap E-commerce Website for IBS
+ 
+During my 4-month web development training at Philiance, I had the opportunity to conceptualize and create on my own an e-commerce website dedicated to offering low Fodmap products specifically designed for individuals suffering from Irritable Bowel Syndrome (IBS).  
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+# Background
+Irritable Bowel Syndrome (IBS) is a common gastrointestinal disorder that affects millions of people worldwide. Managing IBS often involves dietary modifications, and the low FODMAP diet has gained prominence as an effective way to alleviate symptoms. However, finding suitable low FODMAP products can be challenging for those with IBS.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Screenshots selection
+<img width="478" alt="Boutique" src="https://github.com/CamilleLafrance/fodmapStore/assets/77630883/e4bf7140-a8fc-4639-b3ef-9a9b38e5902f">
+<img width="643" alt="Détails produit" src="https://github.com/CamilleLafrance/fodmapStore/assets/77630883/9394f46c-ffb8-4280-8725-4e4844caf4d5">
+<img width="481" alt="Panier + paiement" src="https://github.com/CamilleLafrance/fodmapStore/assets/77630883/871686fe-091f-4a7a-8a65-d5a349a128b5">
+<img width="476" alt="S'inscrire" src="https://github.com/CamilleLafrance/fodmapStore/assets/77630883/7ab2af2b-8ee0-414d-9b8f-0d8cc3ca4d00">
+<img width="480" alt="User - Dashboard" src="https://github.com/CamilleLafrance/fodmapStore/assets/77630883/22e0ce4c-3e7e-40d1-883d-9e17b004e381">
+<img width="473" alt="Se connecter" src="https://github.com/CamilleLafrance/fodmapStore/assets/77630883/728ad6a5-de1d-4251-a568-3bb3bc51438a">
+<img width="483" alt="Admin - Dashboard produits" src="https://github.com/CamilleLafrance/fodmapStore/assets/77630883/a16d5b7e-de92-4234-8c00-0f2fd384c50e">
+<img width="479" alt="Admin - Liste de produits" src="https://github.com/CamilleLafrance/fodmapStore/assets/77630883/d9c22048-904c-48d8-af0c-6b6f8b4645c7">
+<img width="479" alt="Admin - Modifier un produit" src="https://github.com/CamilleLafrance/fodmapStore/assets/77630883/124f7303-3e72-46ff-9138-6242b7084da3">
