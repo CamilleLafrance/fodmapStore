@@ -14,4 +14,4 @@ Irritable Bowel Syndrome (IBS) is a common gastrointestinal disorder that affect
 - <img width="473" alt="Se connecter" src="https://github.com/CamilleLafrance/fodmapStore/assets/77630883/728ad6a5-de1d-4251-a568-3bb3bc51438a">
 - <img width="483" alt="Admin - Dashboard produits" src="https://github.com/CamilleLafrance/fodmapStore/assets/77630883/a16d5b7e-de92-4234-8c00-0f2fd384c50e">
 - <img width="479" alt="Admin - Liste de produits" src="https://github.com/CamilleLafrance/fodmapStore/assets/77630883/d9c22048-904c-48d8-af0c-6b6f8b4645c7">
-- <img width="479" alt="Admin - Modifier un produit" src="https://github.com/CamilleLafrance/fodmapStore/assets/77630883/124f7303-3e72-46ff-9138-6242b7084da3"> alt="Admin - Liste de produits" src="https://github.com/CamilleLafrance/fodmapStore/assets/77630883/d9c22048-904c-48d8-af0c-6b6f8b4645c7">
+- <img width="479" alt="Admin - Modifier un produit" src="https://github.com/CamilleLafrance/fodmapStore/assets/77630883/124f7303-3e72-46ff-9138-6242b7084da3"> 
